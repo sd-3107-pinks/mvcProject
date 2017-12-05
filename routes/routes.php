@@ -14,18 +14,12 @@ class routes
         //You should improve this function by making functions to create routes in a factory. I will look for this when grading
         //I also use object for the route because it has data and it's easier to access.
         $route = new route();
-        //this is the index.php route for GET
-        //Specify the request method
+
         $route->http_method = 'GET';
-        //specify the page.  index.php?page=index.  (controller name / method called
         $route->page = 'homepage';
-        //specify the action that is in the URL to trigger this route index.php?page=index&action=show
         $route->action = 'show';
-        //specify the name of the controller class that will contain the functions that deal with the requests
         $route->controller = 'homepageController';
-        //specify the name of the method that is called, the method should be the same as the action
         $route->method = 'show';
-        //this adds the route to the routes array.
         $routes[] = $route;
         //this is the index.php route for POST
         //This is an examole of the post for index
@@ -35,6 +29,23 @@ class routes
         $route->page = 'homepage';
         $route->controller = 'homepageController';
         $route->method = 'create';
+        $routes[] = $route;
+        //this is the index.php route for POST
+        //This is an examole of the post for new user
+        $route = new route();
+        $route->http_method = 'POST';
+        $route->action = 'signup';
+        $route->page = 'accounts';
+        $route->controller = 'accountsController';
+        $route->method = 'signup';
+        $routes[] = $route;
+        //registering new user
+        $route = new route();
+        $route->http_method = 'POST';
+        $route->action = 'register';
+        $route->page = 'accounts';
+        $route->controller = 'accountsController';
+        $route->method = 'register';
         $routes[] = $route;
         //This is an examole of the post for tasks to show a task
         //GET METHOD index.php?page=tasks&action=show

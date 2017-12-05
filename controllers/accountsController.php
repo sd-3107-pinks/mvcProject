@@ -21,6 +21,10 @@ class accountsController extends http\controller
         $records = accounts::findAll();
         self::getTemplate('all_accounts', $records);
     }
+    public static function signup()
+    {
+        self::getTemplate('new_user');
+    }
     //to call the show function the url is called with a post to: index.php?page=task&action=create
     //this is a function to create new tasks
     //you should check the notes on the project posted in moodle for how to use active record here
@@ -29,17 +33,19 @@ class accountsController extends http\controller
     {
         //https://www.sitepoint.com/why-you-should-use-bcrypt-to-hash-stored-passwords/
         //USE THE ABOVE TO SEE HOW TO USE Bcrypt
-        print_r($_POST);
-        //this just shows creating an account.
         $record = new account();
-        $record->email = "kwilliam@njit.edu";
-        $record->fname = "test2";
-        $record->lname = "cccc2";
-        $record->phone = "4444444";
-        $record->birthday = "0";
-        $record->gender = "male";
-        $record->password = "12345";
+        $record->email = $_POST['email'];
+        $record->fname = $_POST['fname'];
+        $record->lname = $_POST['lname'];
+        $record->phone = $_POST['phone'];
+        $record->birthday = $_POST['bday'];
+        $record->gender = $_POST['gender'];
+        $record->password = $_POST['password'];
+        //print_r($record);
         $record->save();
+
+        header('Location: index.php');
+
     }
     //this is the function to save the user the user profile
     public static function store()
@@ -60,7 +66,17 @@ class accountsController extends http\controller
         //you might want to add something that handles if the password is invalid, you could add a page template and direct to that
         //after you login you can use the header function to forward the user to a page that displays their tasks.
         //        $record = accounts::findUser($_POST['uname']);
-        print_r($_POST);
+        $record = new account();
+
+        $record = accounts::findUserbyUsername($_POST['uname']);
+        if($_POST['psw'] == $record->password){
+            echo 'matched';
+            
+        }else{
+            echo 'not matched';
+        }
+
+
     }
 }
 ?>

@@ -20,6 +20,7 @@ abstract class model
             $statement->bindParam(":$value", $this->$value);
         }
         $statement->execute();
+        //echo "done";
         if ($INSERT == TRUE) {
             $this->id = $db->lastInsertId();
         }
