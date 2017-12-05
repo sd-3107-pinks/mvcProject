@@ -66,6 +66,14 @@ class routes
         $route->controller = 'tasksController';
         $route->method = 'all';
         $routes[] = $route;
+        //GET METHOD index.php?page=tasks&action=allOneUser
+        $route = new route();
+        $route->http_method = 'GET';
+        $route->action = 'allOneUser';
+        $route->page = 'tasks';
+        $route->controller = 'tasksController';
+        $route->method = 'allOneUser';
+        $routes[] = $route;
         //GET METHOD index.php?page=accounts&action=all
         $route = new route();
         $route->http_method = 'GET';

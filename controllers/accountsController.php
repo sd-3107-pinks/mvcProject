@@ -69,11 +69,13 @@ class accountsController extends http\controller
         $record = new account();
 
         $record = accounts::findUserbyUsername($_POST['uname']);
-        if($_POST['psw'] == $record->password){
-            echo 'matched';
-            
+        $checkpsw = accounts::checkPassword($_POST['psw'],$record->password);
+        if($checkpsw == 0){
+            header('Location: index.php');
         }else{
-            echo 'not matched';
+            session_start();
+            $_SESSION['userid']=$record->id;
+            header('Location: index.php?page=tasks&action=allOneUser&id='.$record->id);
         }
 
 

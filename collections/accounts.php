@@ -13,5 +13,13 @@ class accounts extends \database\collection
         $recordsSet = self::getResults($sql);
         return $recordsSet[0];
     }
+    public static function checkPassword($pass1,$pass2){
+
+        if($pass1 == $pass2){
+            return 1;
+        }else{
+            return 0;
+        }
+    }
 }
 ?>

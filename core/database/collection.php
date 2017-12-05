@@ -12,6 +12,7 @@ abstract class collection
     {
         $tableName = get_called_class();
         $sql = 'SELECT * FROM ' . $tableName;
+       // echo $sql;
         return self::getResults($sql);
     }
     //you can use this to run other queries in on classes that extend the collection class because this is protected
