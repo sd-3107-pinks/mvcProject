@@ -75,6 +75,8 @@ class accountsController extends http\controller
         }else{
             session_start();
             $_SESSION['userid']=$record->id;
+            $abc= $_SESSION['userid'];
+            echo $abc;
             header('Location: index.php?page=tasks&action=allOneUser&id='.$record->id);
         }
 

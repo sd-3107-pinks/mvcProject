@@ -6,6 +6,7 @@ abstract class model
     {
         if ($this->id != '') {
             $sql = $this->update();
+            $INSERT = FALSE;
         } else {
             $sql = $this->insert();
             $INSERT = TRUE;
@@ -42,6 +43,7 @@ abstract class model
         $modelName = static::$modelName;
         $tableName = $modelName::getTablename();
         $array = get_object_vars($this);
+        //print_r($this);
         $comma = " ";
         $sql = 'UPDATE ' . $tableName . ' SET ';
         foreach ($array as $key => $value) {
@@ -51,6 +53,7 @@ abstract class model
             }
         }
         $sql .= ' WHERE id=' . $this->id;
+        //echo $sql;
         return $sql;
     }
     public function delete()

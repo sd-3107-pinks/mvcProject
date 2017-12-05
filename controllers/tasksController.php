@@ -57,5 +57,22 @@ class tasksController extends http\controller
         $record->delete();
         print_r($_POST);
     }
+    public static function update()
+    {
+        $records = todos::findOne($_REQUEST['id']);
+        // $record->body = $_REQUEST['body'];
+        $record = new todo();
+        $record->id=$records->id;
+        $record->owneremail=$_POST['owneremail'];
+        $record->ownerid=$_POST['ownerid'];
+        $record->createddate=$_POST['createddate'];
+        $record->duedate=$_POST['duedate'];
+        $record->message=$_POST['message'];
+        $record->isdone=$_POST['isdone'];
+        $record->save();
+        //rint_r($_POST);
+        echo $_SESSION['userid'];
+        //header('Location: index.php?page=tasks&action=allOneUser&id='.$_SESSION['userid']);
+    }
 }
 ?>
