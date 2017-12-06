@@ -56,6 +56,8 @@ class tasksController extends http\controller
         $record = todos::findOne($_REQUEST['id']);
         $record->delete();
         print_r($_POST);
+        session_start();
+        header('Location: index.php?page=tasks&action=allOneUser&id='.$_SESSION["userID"]);
     }
     public static function update()
     {
