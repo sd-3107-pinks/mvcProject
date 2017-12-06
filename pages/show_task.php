@@ -20,6 +20,13 @@
 //print_r($data);
 session_start();
 ?>
+<form action="index.php?page=accounts&action=logout" method="post" id="form3">
+
+
+    <button type="submit" form="form3" value="logout">Logout</button>
+</form>
+
+
 
 <form action="index.php?page=tasks&action=update&id=<?php echo $data->id; ?> " method="post" id="form1">
 

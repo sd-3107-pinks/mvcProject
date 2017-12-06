@@ -18,6 +18,11 @@
 //print utility\htmlTable::genarateTableFromMultiArray($data);
 session_start();
 ?>
+<form action="index.php?page=accounts&action=logout" method="post" id="form3">
+
+
+    <button type="submit" form="form3" value="logout">Logout</button>
+</form>
 
 <form action="index.php?page=tasks&action=addTask" method="POST">
 

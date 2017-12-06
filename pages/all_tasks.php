@@ -14,7 +14,11 @@
 </head>
 
 <body>
+<form action="index.php?page=accounts&action=logout" method="post" id="form3">
 
+
+    <button type="submit" form="form3" value="logout">Logout</button>
+</form>
 <?php
 //this is how you print something
 //print_r($data);
