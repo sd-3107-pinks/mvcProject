@@ -89,6 +89,7 @@ class accountsController extends http\controller
                 echo 'login';
                 session_start();
                 $_SESSION["userID"] = $record->id;
+                $_SESSION["userEmail"] = $record->email;
                 print_r($_SESSION);
                 header('Location: index.php?page=tasks&action=allOneUser&id='.$record->id);
             } else {

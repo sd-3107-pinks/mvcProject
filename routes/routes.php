@@ -115,6 +115,22 @@ class routes
         $route->controller = 'tasksController';
         $route->method = 'update';
         $routes[] = $route;
+        //add tasks page
+        $route = new route();
+        $route->http_method = 'POST';
+        $route->action = 'create';
+        $route->page = 'tasks';
+        $route->controller = 'tasksController';
+        $route->method = 'create';
+        $routes[] = $route;
+        //add tasks function
+        $route = new route();
+        $route->http_method = 'POST';
+        $route->action = 'addTask';
+        $route->page = 'tasks';
+        $route->controller = 'tasksController';
+        $route->method = 'addTask';
+        $routes[] = $route;
         return $routes;
     }
 }

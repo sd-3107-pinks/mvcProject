@@ -34,10 +34,10 @@
         <input type="text" placeholder="Enter Phone number" name="phone" required></br></br>
 
         <label><b>Birthday</b></label>
-        <input type="text" placeholder="Enter Birthday" name="bday" required></br></br>
+        <input type="text" placeholder="Enter Birthday" name="bday"></br></br>
 
         <label><b>Gender</b></label>
-        <input type="text" placeholder="Enter Gender" name="gender" required></br></br>
+        <input type="text" placeholder="Enter Gender" name="gender"></br></br>
 
         <label><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="password" required></br></br>
