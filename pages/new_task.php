@@ -16,6 +16,7 @@
 <?php
 //this is how you print something
 //print utility\htmlTable::genarateTableFromMultiArray($data);
+session_start();
 ?>
 
 <form action="index.php?page=tasks&action=addTask" method="POST">
@@ -33,7 +34,7 @@
         <label><b>isdone</b></label>
         <input type="text" placeholder="Enter isdone" name="isdone"></br></br>
 
-        <button type="submit">Add</button></br></br>
+        <button type="submit">Add</button><a href="index.php?page=tasks&action=allOneUser&id=<?php echo $_SESSION["userID"] ?>">Cancel</a> </br></br>
 
     </div>
 

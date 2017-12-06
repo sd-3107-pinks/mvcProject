@@ -18,15 +18,16 @@
 <?php
 //this is how you print something  $data contains the record that was selected on the table.
 //print_r($data);
+session_start();
 ?>
 
 <form action="index.php?page=tasks&action=update&id=<?php echo $data->id; ?> " method="post" id="form1">
 
 <label><b>Owner Email</b></label>
-<input type="text" name="owneremail" value="<?php echo $data->owneremail; ?>" required></br></br>
+<input type="text" name="owneremail" value="<?php echo $data->owneremail; ?>" readonly required></br></br>
 
 <label><b>Owner ID</b></label>
-<input type="text" name="ownerid" value="<?php echo $data->ownerid; ?>"></br></br>
+<input type="text" name="ownerid" value="<?php echo $data->ownerid; ?>" readonly required></br></br>
 
 <label><b>Created Date</b></label>
 <input type="text" name="createddate" value="<?php echo $data->createddate; ?>"></br></br>
@@ -48,7 +49,7 @@
 <form action="index.php?page=tasks&action=delete&id=<?php echo $data->id; ?> " method="post" id="form2">
 
 
-    <button type="submit" form="form2" value="delete">Delete</button>
+    <button type="submit" form="form2" value="delete">Delete</button><a href="index.php?page=tasks&action=allOneUser&id=<?php echo $_SESSION["userID"] ?>">Cancel</a>
 </form>
 
 
