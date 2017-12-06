@@ -71,8 +71,9 @@ class tasksController extends http\controller
         $record->isdone=$_POST['isdone'];
         $record->save();
         //rint_r($_POST);
-        echo $_SESSION['userid'];
-        //header('Location: index.php?page=tasks&action=allOneUser&id='.$_SESSION['userid']);
+        session_start();
+        print_r($_SESSION);
+        header('Location: index.php?page=tasks&action=allOneUser&id='.$_SESSION["userID"]);
     }
 }
 ?>

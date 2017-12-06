@@ -11,15 +11,15 @@ class accounts extends \database\collection
         echo $sql;
         //grab the only record for find one and return as an object
         $recordsSet = self::getResults($sql);
-        return $recordsSet[0];
-    }
-    public static function checkPassword($pass1,$pass2){
 
-        if($pass1 == $pass2){
-            return 1;
-        }else{
-            return 0;
+        if (is_null($recordsSet)) {
+            return FALSE;
+        } else {
+            return $recordsSet[0];
         }
+
+        //return $recordsSet[0];
     }
+
 }
 ?>

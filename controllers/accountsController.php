@@ -33,18 +33,27 @@ class accountsController extends http\controller
     {
         //https://www.sitepoint.com/why-you-should-use-bcrypt-to-hash-stored-passwords/
         //USE THE ABOVE TO SEE HOW TO USE Bcrypt
-        $record = new account();
-        $record->email = $_POST['email'];
-        $record->fname = $_POST['fname'];
-        $record->lname = $_POST['lname'];
-        $record->phone = $_POST['phone'];
-        $record->birthday = $_POST['bday'];
-        $record->gender = $_POST['gender'];
-        $record->password = $_POST['password'];
-        //print_r($record);
-        $record->save();
+        $user = accounts::findUserbyUsername($_REQUEST['email']);
 
-        header('Location: index.php');
+        if ($user == FALSE) {
+            $record = new account();
+            $record->email = $_POST['email'];
+            $record->fname = $_POST['fname'];
+            $record->lname = $_POST['lname'];
+            $record->phone = $_POST['phone'];
+            $record->birthday = $_POST['bday'];
+            $record->gender = $_POST['gender'];
+            //$record->password = $_POST['password'];
+            $record->password = $record->setPassword($_POST['password']);
+            //print_r($record);
+            $record->save();
+            header('Location: index.php');
+        }
+        else{
+            echo 'Sorry. This email is already registered.';
+        }
+
+
 
     }
     //this is the function to save the user the user profile
@@ -69,17 +78,24 @@ class accountsController extends http\controller
         $record = new account();
 
         $record = accounts::findUserbyUsername($_POST['uname']);
-        $checkpsw = accounts::checkPassword($_POST['psw'],$record->password);
-        if($checkpsw == 0){
-            header('Location: index.php');
-        }else{
-            session_start();
-            $_SESSION['userid']=$record->id;
-            $abc= $_SESSION['userid'];
-            echo $abc;
-            header('Location: index.php?page=tasks&action=allOneUser&id='.$record->id);
+        //$checkpsw = accounts::checkPassword($_POST['psw'],$record->password);
+        print_r($record);
+        echo '1';
+        if ($record == FALSE) {
+            //header('Location: index.php');
+            echo 'user not found';
+        } else {
+            if($record->checkPassword($_POST['psw']) == TRUE) {
+                echo 'login';
+                session_start();
+                $_SESSION["userID"] = $record->id;
+                print_r($_SESSION);
+                header('Location: index.php?page=tasks&action=allOneUser&id='.$record->id);
+            } else {
+                //header('Location: index.php');
+                echo 'password does not match';
+            }
         }
-
 
     }
 }
