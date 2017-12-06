@@ -30,6 +30,8 @@ class routes
         $route->controller = 'homepageController';
         $route->method = 'create';
         $routes[] = $route;
+
+
         //this is the index.php route for POST
         //This is an examole of the post for new user
         $route = new route();
@@ -47,6 +49,33 @@ class routes
         $route->controller = 'accountsController';
         $route->method = 'register';
         $routes[] = $route;
+        //GET METHOD index.php?page=accounts&action=all
+        $route = new route();
+        $route->http_method = 'GET';
+        $route->action = 'all';
+        $route->page = 'accounts';
+        $route->controller = 'accountsController';
+        $route->method = 'all';
+        $routes[] = $route;
+        //GET METHOD index.php?page=accounts&action=show
+        $route = new route();
+        $route->http_method = 'GET';
+        $route->action = 'show';
+        $route->page = 'accounts';
+        $route->controller = 'accountsController';
+        $route->method = 'show';
+        $routes[] = $route;
+        //This goes in the login form action method
+        //GET METHOD index.php?page=accounts&action=login
+        $route = new route();
+        $route->http_method = 'POST';
+        $route->action = 'login';
+        $route->page = 'accounts';
+        $route->controller = 'accountsController';
+        $route->method = 'login';
+        $routes[] = $route;
+
+
         //This is an examole of the post for tasks to show a task
         //GET METHOD index.php?page=tasks&action=show
         $route = new route();
@@ -74,31 +103,7 @@ class routes
         $route->controller = 'tasksController';
         $route->method = 'allOneUser';
         $routes[] = $route;
-        //GET METHOD index.php?page=accounts&action=all
-        $route = new route();
-        $route->http_method = 'GET';
-        $route->action = 'all';
-        $route->page = 'accounts';
-        $route->controller = 'accountsController';
-        $route->method = 'all';
-        $routes[] = $route;
-        //GET METHOD index.php?page=accounts&action=show
-        $route = new route();
-        $route->http_method = 'GET';
-        $route->action = 'show';
-        $route->page = 'accounts';
-        $route->controller = 'accountsController';
-        $route->method = 'show';
-        $routes[] = $route;
-        //This goes in the login form action method
-        //GET METHOD index.php?page=accounts&action=login
-        $route = new route();
-        $route->http_method = 'POST';
-        $route->action = 'login';
-        $route->page = 'accounts';
-        $route->controller = 'accountsController';
-        $route->method = 'login';
-        $routes[] = $route;
+
         //YOU WILL NEED TO ADD MORE ROUTES
         $route = new route();
         $route->http_method = 'POST';
