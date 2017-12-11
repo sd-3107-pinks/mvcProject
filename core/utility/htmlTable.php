@@ -6,7 +6,7 @@ class htmlTable
     public static function genarateTableFromMultiArray($array)
     {
         if(!empty($array)) {
-            $tableGen = '<table border="1"cellpadding="10">';
+            $tableGen = '<table class=".table" border="1"cellpadding="10">';
             $tableGen .= '<tr>';
             //this grabs the first element of the array so we can extract the field headings for the table
             $fieldHeadings = $array[0];
@@ -44,6 +44,19 @@ class htmlTable
         foreach ($innerArray as $value) {
             $tableGen .= '<td>' . $value . '</td>';
         }
+        $tableGen .= '</tr></table><hr>';
+        return $tableGen;
+    }
+    public static function generateTableForOneTodo($tableData)
+    {
+        $tableGen = '<table border="1" cellpadding="10"><tr>';
+        $tableGen .= '<tr><td>id</td><td>'.$tableData->id.'</td></tr>';
+        $tableGen .= '<tr><td>Owner email</td><td>'.$tableData->owneremail.'</td></tr>';
+        $tableGen .= '<tr><td>Owner id</td><td>'.$tableData->ownerid.'</td></tr>';
+        $tableGen .= '<tr><td>created date</td><td>'.$tableData->createddate.'</td></tr>';
+        $tableGen .= '<tr><td>due date</td><td>'.$tableData->duedate.'</td></tr>';
+        $tableGen .= '<tr><td>message</td><td>'.$tableData->message.'</td></tr>';
+        $tableGen .= '<tr><td>isdone</td><td>'.$tableData->isdone.'</td>';
         $tableGen .= '</tr></table><hr>';
         return $tableGen;
     }

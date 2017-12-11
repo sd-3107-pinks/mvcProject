@@ -28,28 +28,12 @@ session_start();
 
 
 
-<form action="index.php?page=tasks&action=update&id=<?php echo $data->id; ?> " method="post" id="form1">
+<form action="index.php?page=tasks&action=edit&id=<?php echo $data->id; ?> " method="post" id="form1">
+    <?php print utility\htmlTable::generateTableForOneTodo($data);
+  //  print_r($data);
+    ?>
 
-<label><b>Owner Email</b></label>
-<input type="text" name="owneremail" value="<?php echo $data->owneremail; ?>" readonly required></br></br>
-
-<label><b>Owner ID</b></label>
-<input type="text" name="ownerid" value="<?php echo $data->ownerid; ?>" readonly required></br></br>
-
-<label><b>Created Date</b></label>
-<input type="text" name="createddate" value="<?php echo $data->createddate; ?>"></br></br>
-
-<label><b>Due Date</b></label>
-<input type="text" name="duedate" value="<?php echo $data->duedate; ?>"></br></br>
-
-<label><b>Message</b></label>
-<input type="text" name="message" value="<?php echo $data->message; ?>"></br></br>
-
-<label><b>isDone</b></label>
-<input type="text" name="isdone" value="<?php echo $data->isdone; ?>" ></br></br>
-
-
-    <button type="submit" form="form1" value="delete">Update</button>
+    <button type="submit" form="form1" value="edit">Edit</button>
 </form>
 
 

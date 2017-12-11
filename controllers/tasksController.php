@@ -14,6 +14,12 @@ class tasksController extends http\controller
     {
         $record = todos::findOne($_REQUEST['id']);
         self::getTemplate('show_task', $record);
+       // self::getTemplate('edit_task', $record);
+    }
+    public static function editTask()
+    {
+        $record = todos::findOne($_REQUEST['id']);
+        self::getTemplate('edit_task', $record);
     }
     //to call the show function the url is index.php?page=task&action=list_task
     public static function all()
