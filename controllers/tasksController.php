@@ -54,7 +54,6 @@ class tasksController extends http\controller
     public static function delete()
     {
         $record = todos::findOne($_REQUEST['id']);
-        echo 'inside delete';
         $record->delete();
         session_start();
         header('Location: index.php?page=tasks&action=allOneUser&id='.$_SESSION["userID"]);
@@ -63,7 +62,6 @@ class tasksController extends http\controller
     {
         $records = todos::findOne($_REQUEST['id']);
         // $record->body = $_REQUEST['body'];
-        echo 'inside update';
         $record = new todo();
         $record->id=$records->id;
         $record->owneremail=$_POST['owneremail'];

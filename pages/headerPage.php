@@ -28,10 +28,13 @@
 
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> My Profile</a></li>
             <form action="index.php?page=accounts&action=logout" method="post" id="form3" style="float:right;">
-            <li><button class="btn btn-link navbar-btn" type="submit">Logout</button></li>
+                <li><button class="btn btn-link navbar-btn" type="submit">Logout</button></li>
             </form>
+            <form action="index.php?page=accounts&action=myProf" method="post" id="form4" style="float:right;">
+                 <li><span class="glyphicon glyphicon-user"></span><button class="btn btn-link navbar-btn" type="submit">My Profile</button></li>
+            </form>
+
         </ul>
     </div>
 </nav>

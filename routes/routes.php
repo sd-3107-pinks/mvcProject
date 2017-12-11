@@ -82,6 +82,22 @@ class routes
         $route->controller = 'accountsController';
         $route->method = 'logout';
         $routes[] = $route;
+        //GET METHOD index.php?page=accounts&action=myProf
+        $route = new route();
+        $route->http_method = 'POST';
+        $route->action = 'myProf';
+        $route->page = 'accounts';
+        $route->controller = 'accountsController';
+        $route->method = 'show_profile';
+        $routes[] = $route;
+        //GET METHOD index.php?page=accounts&action=update
+        $route = new route();
+        $route->http_method = 'POST';
+        $route->action = 'update';
+        $route->page = 'accounts';
+        $route->controller = 'accountsController';
+        $route->method = 'update_profile';
+        $routes[] = $route;
 
 
         //This is an examole of the post for tasks to show a task
