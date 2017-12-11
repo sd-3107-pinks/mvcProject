@@ -25,7 +25,7 @@
             <li class="active"><a href="#">Home</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><font color="white">Not a member yet?</font><span class="glyphicon glyphicon-user"></span><button class="btn .btn-default navbar-btn" type="submit">Signup</button></li>
+            <li><font color="white">Not a member yet?</font><span class="glyphicon glyphicon-user"></span><button class="btn btn-link navbar-btn" type="submit">Signup</button></li>
         </ul>
     </div>
 </nav>

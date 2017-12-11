@@ -6,7 +6,7 @@ class htmlTable
     public static function genarateTableFromMultiArray($array)
     {
         if(!empty($array)) {
-            $tableGen = '<table class=".table" border="1"cellpadding="10">';
+            $tableGen = '<table class="table-hover table table-bordered table-striped">';
             $tableGen .= '<tr>';
             //this grabs the first element of the array so we can extract the field headings for the table
             $fieldHeadings = $array[0];
@@ -35,7 +35,7 @@ class htmlTable
     }
     public static function generateTableFromOneRecord($innerArray)
     {
-        $tableGen = '<table border="1" cellpadding="10"><tr>';
+        $tableGen = '<table class="table-hover table table-bordered table-striped"><tr>';
         $tableGen .= '<tr>';
         foreach ($innerArray as $innerRow => $value) {
             $tableGen .= '<th>' . $innerRow . '</th>';
@@ -49,7 +49,7 @@ class htmlTable
     }
     public static function generateTableForOneTodo($tableData)
     {
-        $tableGen = '<table border="1" cellpadding="10"><tr>';
+        $tableGen = '<table class="table-hover table table-bordered table-striped"><tr>';
         $tableGen .= '<tr><td>id</td><td>'.$tableData->id.'</td></tr>';
         $tableGen .= '<tr><td>Owner email</td><td>'.$tableData->owneremail.'</td></tr>';
         $tableGen .= '<tr><td>Owner id</td><td>'.$tableData->ownerid.'</td></tr>';

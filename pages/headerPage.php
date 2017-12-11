@@ -18,16 +18,20 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">WebSiteName</a>
+            <a class="navbar-brand" href="#">Tasks.com</a>
         </div>
         <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Page 1</a></li>
-            <li><a href="#">Page 2</a></li>
+            <form action="index.php?page=tasks&action=create" method="POST" style="float:left;">
+            <li><button class="btn btn-link navbar-btn" type="submit">Create Task</button></li>
+            </form>
+
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#"><span class="glyphicon glyphicon-user"></span> My Profile</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+            <form action="index.php?page=accounts&action=logout" method="post" id="form3" style="float:right;">
+            <li><button class="btn btn-link navbar-btn" type="submit">Logout</button></li>
+            </form>
         </ul>
     </div>
 </nav>
