@@ -64,12 +64,12 @@ class htmlTable
     {
         $tableGen = '<table class="table-hover table table-bordered table-striped"><tr>';
         $tableGen .= '<tr><td>Id</td><td>'.$tableData->id.'</td></tr>';
-        $tableGen .= '<tr><td>Email</td><td><input type="text" name="email" value="'.$tableData->email.'" required></td></tr>';
-        $tableGen .= '<tr><td>First Name</td><td><input type="text" name="fname" value="'.$tableData->fname.'" required></td></tr>';
-        $tableGen .= '<tr><td>Last Name</td><td><input type="text" name="lname" value="'.$tableData->lname.'" ></td></tr>';
-        $tableGen .= '<tr><td>Phone</td><td><input type="text" name="phone" value="'.$tableData->phone.'"></td></tr>';
-        $tableGen .= '<tr><td>Birthday</td><td><input type="text" name="birthday" value="'.$tableData->birthday.'"></td></tr>';
-        $tableGen .= '<tr><td>Gender</td><td><input type="text" name="gender" value="'.$tableData->gender.'"></td>';
+        $tableGen .= '<tr><td>Email</td><td>'.$tableData->email.'</td></tr>';
+        $tableGen .= '<tr><td>First Name</td><td>'.$tableData->fname.'</td></tr>';
+        $tableGen .= '<tr><td>Last Name</td><td>'.$tableData->lname.'</td></tr>';
+        $tableGen .= '<tr><td>Phone</td><td>'.$tableData->phone.'</td></tr>';
+        $tableGen .= '<tr><td>Birthday</td><td>'.$tableData->birthday.'</td></tr>';
+        $tableGen .= '<tr><td>Gender</td><td>'.$tableData->gender.'</td>';
         $tableGen .= '</tr></table><hr>';
         return $tableGen;
     }
