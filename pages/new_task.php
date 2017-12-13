@@ -2,6 +2,7 @@
 
 <?php
 session_start();
+date_default_timezone_set('America/New_York');
 ?>
 
 <form action="index.php?page=tasks&action=addTask" method="POST">
@@ -11,24 +12,30 @@ session_start();
             <div class="col-lg-2">
                 <label><b>Created Date</b></label>
             </div>
-            <div class="col-lg-1">
-                <input type="text" name="createddate" required>
+            <div class="col-lg-2">
+                <div class="form-group">
+                     <input type="text" name="createddate" class="form-control" value="<?php echo date("j/n/Y"); ?>" readonly required>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-2">
                 <label><b>Due Date</b></label>
             </div>
-            <div class="col-lg-1">
-                <input type="text" name="duedate">
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <input type="text" name="duedate" class="form-control" />
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-2">
                 <label><b>Message</b></label>
             </div>
-            <div class="col-lg-1">
-                <input type="text" name="message">
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <input type="text" name="message" class="form-control">
+                </div>
             </div>
         </div>
         <div class="row">
@@ -36,7 +43,9 @@ session_start();
                 <label><b>isDone</b></label>
             </div>
             <div class="col-lg-1">
-                <input type="text" name="isdone">
+                <div class="form-group">
+                    <input type="text" name="isdone" class="form-control">
+                </div>
             </div>
         </div>
 
@@ -49,6 +58,8 @@ session_start();
 </form>
 
 
-<script src="js/scripts.js"></script>
+<script type="text/javascript">
+
+</script>
 </body>
 </html>

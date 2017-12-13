@@ -40,11 +40,19 @@ class tasksController extends http\controller
     public static function addTask()
     {
         session_start();
+        date_default_timezone_set('America/New_York');
+        $format = "d/m/Y";
         $record = new todo();
         $record->owneremail = $_SESSION["userEmail"];
         $record->ownerid = $_SESSION["userID"];
-        $record->createddate = $_POST['createddate'];
-        $record->duedate = $_POST['duedate'];
+        $createddate=$_POST['createddate'];
+        $dateobj = DateTime::createFromFormat($format, $createddate);
+        $iso_datetime_created = $dateobj->format(Datetime::ATOM);
+        $record->createddate = $iso_datetime_created;
+        $duedate=$_POST['duedate'];
+        $dateobj = DateTime::createFromFormat($format, $duedate);
+        $iso_datetime_due = $dateobj->format(Datetime::ATOM);
+        $record->duedate = $iso_datetime_due;
         $record->message = $_POST['message'];
         $record->isdone = $_POST['isdone'];
         $record->save();
