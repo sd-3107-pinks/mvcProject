@@ -10,27 +10,33 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-2">
+            <div class="col-lg-3">
                 <label><b>Enter your current password:</b></label>
             </div>
-            <div class="col-lg-1">
-                <input type="text" name="currentPass" required>
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <input type="password" class="form-control" name="currentPass" required>
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-2">
+            <div class="col-lg-3">
                 <label><b>Enter New Password</b></label>
             </div>
-            <div class="col-lg-1">
-                <input type="text" name="newPass1">
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <input type="password" class="form-control" name="newPass1">
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-2">
+            <div class="col-lg-3">
                 <label><b>Re-enter Password</b></label>
             </div>
-            <div class="col-lg-1">
-                <input type="text" name="newPass2">
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <input type="password" class="form-control" name="newPass2">
+                </div>
             </div>
         </div>
 

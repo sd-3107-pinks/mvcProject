@@ -35,13 +35,28 @@
 <form action="index.php?page=accounts&action=login" method="POST">
 
     <div class="container">
-        <label><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required></br></br>
+        <div class="row">
+            <div class="col-lg-2">
+                <label><b>Username</b></label>
+            </div>
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <input type="text" name="uname" class="form-control" required >
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2">
+                <label><b>Password</b></label>
+            </div>
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <input type="password" name="psw" class="form-control" required>
+                </div>
+            </div>
+        </div>
 
-        <label><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required></br></br>
-
-        <button type="submit">Login</button></br></br>
+        <div class="col-lg-2"><button class="btn btn-primary" type="submit">Login</button>
 
     </div>
 

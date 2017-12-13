@@ -26,7 +26,6 @@
             <a class="navbar-brand" href="#">Tasks.com</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
             <form action="index.php?page=tasks&action=create" method="POST" style="float:left;">
             <li><button class="btn btn-link navbar-btn" type="submit">Create Task</button></li>
             </form>

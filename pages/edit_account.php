@@ -13,48 +13,60 @@
             <div class="col-lg-2">
                 <label><b>Email</b></label>
             </div>
-            <div class="col-lg-1">
-                <input type="text" name="email" value="<?php echo $data->email; ?>" required>
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <input type="text" name="email" class="form-control" value="<?php echo $data->email; ?>" required>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-2">
                 <label><b>First Name</b></label>
             </div>
-            <div class="col-lg-1">
-                <input type="text" name="fname" value="<?php echo $data->fname; ?>" required>
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <input type="text" name="fname" class="form-control" value="<?php echo $data->fname; ?>" required>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-2">
                 <label><b>Last Name</b></label>
             </div>
-            <div class="col-lg-1">
-                <input type="text" name="lname" value="<?php echo $data->lname; ?>">
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <input type="text" name="lname" class="form-control" value="<?php echo $data->lname; ?>">
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-2">
                 <label><b>Phone</b></label>
             </div>
-            <div class="col-lg-1">
-                <input type="text" name="phone" value="<?php echo $data->phone; ?>">
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <input type="text" name="phone" class="form-control" value="<?php echo $data->phone; ?>">
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-2">
                 <label><b>Birthday</b></label>
             </div>
-            <div class="col-lg-1">
-                <input type="text" name="birthday" value="<?php echo $data->birthday; ?>">
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <input type="text" name="birthday" class="form-control" value="<?php echo $data->birthday; ?>">
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-2">
                 <label><b>Gender</b></label>
             </div>
-            <div class="col-lg-1">
-                <input type="text" name="gender" value="<?php echo $data->gender; ?>" >
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <input type="text" name="gender" class="form-control" value="<?php echo $data->gender; ?>" >
+                </div>
             </div>
         </div>
 
