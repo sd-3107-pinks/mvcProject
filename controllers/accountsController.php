@@ -125,24 +125,30 @@ class accountsController extends http\controller
 
         $record = accounts::findUserbyUsername($_POST['uname']);
         //$checkpsw = accounts::checkPassword($_POST['psw'],$record->password);
-        print_r($record);
-        echo '1';
+       // print_r($record);
+        //echo '1';
         if ($record == FALSE) {
             //header('Location: index.php');
-            echo 'user not found';
+            $errorMsg= 'user not found';
         } else {
             if($record->checkPassword($_POST['psw']) == TRUE) {
-                echo 'login';
+                //echo 'login';
                 session_start();
                 $_SESSION["userID"] = $record->id;
                 $_SESSION["userEmail"] = $record->email;
-                print_r($_SESSION);
+                //print_r($_SESSION);
                 header('Location: index.php?page=tasks&action=allOneUser&id='.$record->id);
             } else {
                 //header('Location: index.php');
-                echo 'password does not match';
+                $errorMsg= 'password does not match';
             }
         }
+
+        if ($errorMsg) {
+            $_SESSION['validation_message'] = $errorMsg; //session variable to save the error message to show as an alert.
+        }
+        print "<html></html><script type='text/javascript'>alert(\"$errorMsg\");</script></html>";
+       //header('Location: index.php');
 
     }
     public static function logout()
