@@ -147,8 +147,7 @@ class accountsController extends http\controller
         if ($errorMsg) {
             $_SESSION['validation_message'] = $errorMsg; //session variable to save the error message to show as an alert.
         }
-        print "<html></html><script type='text/javascript'>alert(\"$errorMsg\");</script></html>";
-       //header('Location: index.php');
+        print "<html></html><script type='text/javascript'>alert(\"$errorMsg\");</script></html>"
 
     }
     public static function logout()
