@@ -6,7 +6,7 @@
 //print_r($data);
 ?>
 
-<form action="index.php?page=accounts&action=updatePass&id=<?php echo $data->id; ?> " method="post" id="form1">
+<form action="index.php?page=accounts&action=updatePass&id=<?php echo $data->id; ?> " method="POST" name="changePass">
 
     <div class="container">
         <div class="row">
@@ -15,7 +15,7 @@
             </div>
             <div class="col-lg-2">
                 <div class="form-group">
-                    <input type="password" class="form-control" name="currentPass" required>
+                    <input type="password" class="form-control" name="currentPass"  required>
                 </div>
             </div>
         </div>
@@ -25,8 +25,13 @@
             </div>
             <div class="col-lg-2">
                 <div class="form-group">
-                    <input type="password" class="form-control" name="newPass1">
+                    <input type="password" class="form-control" name="newPass1" id="password">
                 </div>
+            </div>
+            <div class="col-lg-2">
+                <span id="passStrong" class="glyphicon glyphicon-ok">Strong</span>
+                <span id="passWeak" class="glyphicon glyphicon-warning-sign">Weak</span>
+                <span id="passSmall" class="glyphicon glyphicon-remove">Not Enough</span>
             </div>
         </div>
         <div class="row">
@@ -35,15 +40,21 @@
             </div>
             <div class="col-lg-2">
                 <div class="form-group">
-                    <input type="password" class="form-control" name="newPass2">
+                    <input type="password" class="form-control" name="newPass2" id="password2">
                 </div>
+            </div>
+            <div class="col-lg-3">
+                <span id="passMatched" class="glyphicon glyphicon-ok">Passwords match</span>
+                <span id="passNotMatched" class="glyphicon glyphicon-remove">Passwords do not match</span>
             </div>
         </div>
 
+        <div class="col-lg-2"><button class="btn btn-primary" type="submit" id="updatePass" value="save">Update Password</button><a href="index.php?page=accounts&action=showProf">Cancel</a></div>
     </div>
-    <div class="col-lg-2"><button class="btn btn-primary" type="submit" form="form1" value="save">Update Password</button><a href="index.php?page=accounts&action=showProf">Cancel</a></div>
-</form>
 
-<script src="js/scripts.js"></script>
+</form>
+<script type="text/javascript" src="validations/jsvalidation.js">
+
+</script>
 </body>
 </html>

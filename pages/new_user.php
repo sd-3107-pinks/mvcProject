@@ -28,7 +28,7 @@
 //print utility\htmlTable::genarateTableFromMultiArray($data);
 ?>
 
-<form action="index.php?page=accounts&action=register" method="POST">
+<form action="index.php?page=accounts&action=register" method="POST" name="userform">
 
     <div class="container">
         <div class="row">
@@ -62,16 +62,6 @@
             <div class="col-lg-2">
                 <div class="form-group">
                     <input type="text" placeholder="Enter Last Name" id="lname" name="lname" class="form-control" required>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-2">
-                <label><b>Phone Number</b></label>
-            </div>
-            <div class="col-lg-2">
-                <div class="form-group">
-                    <input type="text" placeholder="Enter Phone Number" name="phone" class="form-control" required>
                 </div>
             </div>
         </div>

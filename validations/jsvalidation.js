@@ -78,7 +78,54 @@ $(document).ready(function(e) {
         if(pass1!=pass2){
             errorMsgs=errorMsgs.concat('Passwords do not match');
         }
-        alert(errorMsgs);
+        if(errorMsgs.length>0) {
+            alert(errorMsgs);
+        }else{
+            document.userform.submit();
+        }
+    });
+    $('#editAccount').click(function () {
+        var errorMsgs="";
+        var sEmail = $('#email').val();
+        if (sEmail.length==0) {
+            errorMsgs=errorMsgs.concat('Please enter your email address');
+        }
+        if (!validateEmail(sEmail)) {
+            errorMsgs=errorMsgs.concat('Please enter valid email address');
+        }
+        var fname = $('#fname').val();
+        if (fname.length==0) {
+            errorMsgs=errorMsgs.concat('Please enter First Name');
+        }
+        var lname = $('#lname').val();
+        if (lname.length==0) {
+            errorMsgs=errorMsgs.concat('Please enter Last Name');
+        }
+        if(errorMsgs.length>0) {
+            alert(errorMsgs);
+        }
+        else{
+            document.userformedit.submit();
+        }
+    });
+    $('#updatePass').click(function () {
+        var errorMsgs="";
+        var pass1 = $('#password').val();
+        if (pass1.length<6) {
+            errorMsgs=errorMsgs.concat('Please enter Password');
+        }
+        var pass2 = $('#password2').val();
+        if (pass2.length<6) {
+            errorMsgs=errorMsgs.concat('Please reenter Password');
+        }
+        if(pass1!=pass2){
+            errorMsgs=errorMsgs.concat('Passwords do not match');
+        }
+        if(errorMsgs.length>0) {
+            alert(errorMsgs);
+        }else{
+            document.changePass.submit();
+        }
     });
 });
 function validateEmail(sEmail) {

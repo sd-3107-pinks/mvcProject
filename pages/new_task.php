@@ -5,7 +5,7 @@ session_start();
 date_default_timezone_set('America/New_York');
 ?>
 
-<form action="index.php?page=tasks&action=addTask" method="POST">
+<form action="index.php?page=tasks&action=addTask" method="POST" name="addTaskForm">
 
     <div class="container">
         <div class="row">
@@ -24,7 +24,7 @@ date_default_timezone_set('America/New_York');
             </div>
             <div class="col-lg-2">
                 <div class="form-group">
-                    <input type="text" name="duedate" class="form-control" />
+                    <input type="text" name="duedate" class="form-control" id="duedate"/>
                 </div>
             </div>
         </div>
@@ -34,31 +34,18 @@ date_default_timezone_set('America/New_York');
             </div>
             <div class="col-lg-2">
                 <div class="form-group">
-                    <input type="text" name="message" class="form-control">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-2">
-                <label><b>isDone</b></label>
-            </div>
-            <div class="col-lg-1">
-                <div class="form-group">
-                    <input type="text" name="isdone" class="form-control">
+                    <input type="text" name="message" class="form-control" id="message">
                 </div>
             </div>
         </div>
 
-        <div class="col-lg-2"><button class="btn btn-primary" type="submit">Add Task</button><a href="index.php?page=tasks&action=allOneUser&id=<?php echo $_SESSION["userID"] ?>">Cancel</a></div>
-
+        <div class="col-lg-2"><button class="btn btn-primary" id="addTask" form="form1" type="submit" value="save">Add Task</button><a href="index.php?page=tasks&action=allOneUser&id=<?php echo $_SESSION["userID"] ?>">Cancel</a></div>
 
     </div>
-
-
 </form>
 
 
-<script type="text/javascript">
+<script type="text/javascript" src="validations/todovalidation.js">
 
 </script>
 </body>

@@ -54,7 +54,7 @@ class tasksController extends http\controller
         $iso_datetime_due = $dateobj->format(Datetime::ATOM);
         $record->duedate = $iso_datetime_due;
         $record->message = $_POST['message'];
-        $record->isdone = $_POST['isdone'];
+        //$record->isdone = $_POST['isdone'];
         $record->save();
         header('Location: index.php?page=tasks&action=allOneUser&id='.$_SESSION["userID"]);
 

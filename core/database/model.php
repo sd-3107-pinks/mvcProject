@@ -33,6 +33,9 @@ abstract class model
         $tableName = $modelName::getTablename();
         $array = get_object_vars($this);
         unset($array['id']);
+        if($array['isdone']){
+            unset($array['isdone']);
+        }
         $columnString = implode(',', array_flip($array));
         $valueString = ':' . implode(',:', array_flip($array));
         $sql = 'INSERT INTO ' . $tableName . ' (' . $columnString . ') VALUES (' . $valueString . ')';
