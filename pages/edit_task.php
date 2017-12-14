@@ -8,7 +8,7 @@ session_start();
 date_default_timezone_set('America/New_York');
 ?>
 
-<form action="index.php?page=tasks&action=update&id=<?php echo $data->id; ?> " method="post" id="form1">
+<form action="index.php?page=tasks&action=update&id=<?php echo $data->id; ?> " method="post" name="editTaskForm">
 
     <div class="container">
         <div class="row">
@@ -47,7 +47,7 @@ date_default_timezone_set('America/New_York');
             </div>
             <div class="col-lg-2">
                 <div class="form-group">
-                    <input type="text" name="duedate" class="form-control" value="<?php echo $data->duedate; ?>">
+                    <input type="text" name="duedate" id="duedate" class="form-control" value="<?php echo $data->duedate; ?>">
                 </div>
             </div>
         </div>
@@ -57,7 +57,7 @@ date_default_timezone_set('America/New_York');
             </div>
             <div class="col-lg-2">
                 <div class="form-group">
-                    <input type="text" name="message" class="form-control" value="<?php echo $data->message; ?>">
+                    <input type="text" name="message" id="message" class="form-control" value="<?php echo $data->message; ?>">
                 </div>
             </div>
         </div>
@@ -67,15 +67,17 @@ date_default_timezone_set('America/New_York');
             </div>
             <div class="col-lg-1">
                 <div class="form-group">
-                <input type="text" name="isdone" class="form-control" value="<?php echo $data->isdone; ?>" >
+                <input type="text" name="isdone" id="isdone" class="form-control" value="<?php echo $data->isdone; ?>" >
                 </div>
             </div>
         </div>
 
     </div>
-    <div class="col-lg-2"><button class="btn btn-primary" type="submit" form="form1" value="save">Save</button><a href="index.php?page=tasks&action=allOneUser&id=<?php echo $_SESSION["userID"] ?>">Cancel</a></div>
+    <div class="col-lg-2"><button class="btn btn-primary" id="editTask" type="submit" form="form1" value="save">Save</button><a href="index.php?page=tasks&action=allOneUser&id=<?php echo $_SESSION["userID"] ?>">Cancel</a></div>
 </form>
 
-<script src="js/scripts.js"></script>
+<script type="text/javascript" src="validations/todovalidation.js">
+
+</script>
 </body>
 </html>
