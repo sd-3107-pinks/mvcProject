@@ -1,26 +1,15 @@
 <?php
 namespace http;
 
-//by using the use here you don't have to put http on each class in that namespace
 class processRequest
 {
-    //this is the main function of the program to calculate the response to a get or post request
     public static function createResponse()
     {
         $requested_route = processRequest::getRequestedRoute();
-        //this print r shows the requested route
-        //print_r($requested_route);
-        //This is an important function to look at, it determines which controller to use
         $controller_name = $requested_route->controller;
-        //this determines the method to call for the controller
         $controller_method = $requested_route->method;
-        //these echo helps figure out the controller name and method
-        // echo $controller_name . '</br>';
-        // echo $controller_method . '</br>';
-        //I use a static for the controller because it doesn't have any properties
         $controller_name::$controller_method();
     }
-    //this function matches the request to the correct controller
     public static function getRequestedRoute()
     {
         //this is a helper function that needs to be improved because it does too much.  I will look for this in grading

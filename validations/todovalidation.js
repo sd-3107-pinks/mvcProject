@@ -26,7 +26,6 @@ $(document).ready(function(e) {
             errorMsgs=errorMsgs.concat('Please enter message');
         }
         var isdone = $('#isdone').val();
-        alert(isdone);
         if (isdone.length<1) {
             errorMsgs=errorMsgs.concat('Please enter isdone');
         }

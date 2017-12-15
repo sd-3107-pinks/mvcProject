@@ -31,32 +31,30 @@
 
 <form action="index.php?page=accounts&action=login" method="POST">
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-2">
-                <label><b>Username</b></label>
-            </div>
-            <div class="col-lg-2">
-                <div class="form-group">
-                    <input type="text" name="uname" class="form-control" required >
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="well login-box">
+                        <form action="">
+                            <legend>Login</legend>
+                            <div class="form-group">
+                                <label for="uname">E-mail or Username</label>
+                                <input value='' id="uname" name="uname" placeholder="E-mail or Username" type="text" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label for="psw">Password</label>
+                                <input id="psw" name="psw" value='' placeholder="Password" type="text" class="form-control" />
+                            </div>
+                            <div class="form-group text-center">
+                                <button class="btn btn-primary btn-success btn-login-submit" type="submit">Login</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-2">
-                <label><b>Password</b></label>
-            </div>
-            <div class="col-lg-2">
-                <div class="form-group">
-                    <input type="password" name="psw" class="form-control" required>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-2"><button class="btn btn-primary" type="submit">Login</button>
-
-    </div>
-
 
 </form>
 

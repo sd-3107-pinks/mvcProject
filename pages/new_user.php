@@ -128,9 +128,13 @@
         <div class="col-lg-2"><button class="btn btn-primary" type="submit" id="register" form="form1" value="save">Register</button><a href="index.php">Cancel</a></div>
     </div>
 
+
+
+
 </form>
 <script type="text/javascript" src="validations/jsvalidation.js">
 
 </script>
+<script type="text/javascript" src="http://www.clubdesign.at/floatlabels.js"></script>
 </body>
 </html>

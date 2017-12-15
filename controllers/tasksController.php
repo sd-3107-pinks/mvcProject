@@ -1,20 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: kwilliams
- * Date: 11/27/17
- * Time: 5:32 PM
- */
-//each page extends controller and the index.php?page=tasks causes the controller to be called
+
 class tasksController extends http\controller
 {
-    //each method in the controller is named an action.
     //to call the show function the url is index.php?page=task&action=show
     public static function show()
     {
         $record = todos::findOne($_REQUEST['id']);
         self::getTemplate('show_task', $record);
-       // self::getTemplate('edit_task', $record);
     }
     public static function editTask()
     {
@@ -54,7 +46,6 @@ class tasksController extends http\controller
         $iso_datetime_due = $dateobj->format(Datetime::ATOM);
         $record->duedate = $iso_datetime_due;
         $record->message = $_POST['message'];
-        //$record->isdone = $_POST['isdone'];
         $record->save();
         header('Location: index.php?page=tasks&action=allOneUser&id='.$_SESSION["userID"]);
 
@@ -69,7 +60,6 @@ class tasksController extends http\controller
     public static function update()
     {
         $records = todos::findOne($_REQUEST['id']);
-        // $record->body = $_REQUEST['body'];
         $record = new todo();
         $record->id=$records->id;
         $record->owneremail=$_POST['owneremail'];
