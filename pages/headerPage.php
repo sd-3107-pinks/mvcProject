@@ -19,24 +19,24 @@
 </head>
 
 <body>
-
+<?php session_start();?>
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Tasks.com</a>
+            <a class="navbar-brand" href="index.php?page=tasks&action=allOneUser&id=<?php echo $_SESSION["userID"] ?>"><b>Tasks.com</b></a>
         </div>
         <ul class="nav navbar-nav">
             <form action="index.php?page=tasks&action=create" method="POST" style="float:left;">
-            <li><button class="btn btn-link navbar-btn" type="submit">Create Task</button></li>
+                <li><button class="btn btn-link navbar-btn" type="submit"><b>Create Task</b></button></li>
             </form>
 
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <form action="index.php?page=accounts&action=logout" method="post" id="form3" style="float:right;">
-                <li><button class="btn btn-link navbar-btn" type="submit">Logout</button></li>
+                <li><button class="btn btn-link navbar-btn" type="submit"><b>Logout</b></button></li>
             </form>
             <form action="index.php?page=accounts&action=myProf" method="post" id="form4" style="float:right;">
-                 <li><span class="glyphicon glyphicon-user"></span><button class="btn btn-link navbar-btn" type="submit">My Profile</button></li>
+                <li><span class="glyphicon glyphicon-user"></span><button class="btn btn-link navbar-btn" type="submit"><b>My Profile</b></button></li>
             </form>
 
         </ul>

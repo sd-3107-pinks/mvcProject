@@ -13,12 +13,12 @@
 
 </head>
 
-<body>
+<body background="https://hdwallsource.com/img/2016/7/keyboard-macro-wallpaper-background-50592-52284-hd-wallpapers.jpg">
 
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Tasks.com</a>
+            <a class="navbar-brand" href="#"><b>Tasks.com</b></a>
         </div>
     </div>
 </nav>
@@ -32,104 +32,121 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-2">
-                <label><b>Email</b></label>
-            </div>
-            <div class="col-lg-3">
-                <div class="form-group">
-                    <input type="text" placeholder="Enter Email" name="email" id="email" class="form-control">
+            <div class="col-md-3"></div>
+            <div class="col-md-7">
+                <div class="well login-box">
+                    <form action="">
+                        <legend>Sign Up</legend>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="email"><h5><b>E-mail Adress</b></h5></label>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input value='' id="email" name="email" placeholder="Enter email" type="text" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <span id="emailok" class="glyphicon glyphicon-ok">Valid</span>
+                                <span id="emailnotok" class="glyphicon glyphicon-remove">Invalid</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="fname"><h5><b>First Name</b></h5></label>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <input value='' id="fname" name="fname" placeholder="Enter First Name" type="text" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="lname"><h5><b>Last Name</b></h5></label>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <input value='' id="lname" name="lname" placeholder="Enter Last Name" type="text" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="phone"><h5><b>Phone Number</b></h5></label>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <input value='' id="phone" name="phone" placeholder="Enter Phone Number" type="text" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="bday"><h5><b>Birthday</b></h5></label>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <input value='' id="bday" name="bday" placeholder="Enter Date of Birth" type="text" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="gender"><h5><b>Gender</b></h5></label>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <input value='' id="gender" name="gender" placeholder="Enter Gender" type="text" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="password"><h5><b>Password</b></h5></label>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <input id="password" name="password" value='' placeholder="Enter Password" type="password" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <span id="passStrong" class="glyphicon glyphicon-ok">Strong</span>
+                                <span id="passWeak" class="glyphicon glyphicon-warning-sign">Weak</span>
+                                <span id="passSmall" class="glyphicon glyphicon-remove">Not Enough</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="password2"><h5><b>Re-enter Password</b></h5></label>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <input id="password2" name="password2" value='' placeholder="Re-enter Password" type="password" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <span id="passMatched" class="glyphicon glyphicon-ok">Passwords match</span>
+                                <span id="passNotMatched" class="glyphicon glyphicon-remove">Passwords do not match</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group text-right">
+                                    <button class="btn btn-primary btn-login-submit" type="submit" id="register" form="form1" value="save">Register</button>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="form-group text-center">
+                                    <a href="index.php">Cancel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-            <div class="col-lg-1">
-                <span id="emailok" class="glyphicon glyphicon-ok">Valid</span>
-                <span id="emailnotok" class="glyphicon glyphicon-remove">Invalid</span>
-            </div>
         </div>
-        <div class="row">
-            <div class="col-lg-2">
-                <label><b>First Name</b></label>
-            </div>
-            <div class="col-lg-2">
-                <div class="form-group">
-                    <input type="text" placeholder="Enter First Name" id="fname" name="fname" class="form-control" required>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-2">
-                <label><b>Last Name</b></label>
-            </div>
-            <div class="col-lg-2">
-                <div class="form-group">
-                    <input type="text" placeholder="Enter Last Name" id="lname" name="lname" class="form-control" required>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-2">
-                <label><b>Phone Number</b></label>
-            </div>
-            <div class="col-lg-2">
-                <div class="form-group">
-                    <input type="text" placeholder="Enter Phone Number" name="phone" class="form-control" required>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-2">
-                <label><b>Birthday</b></label>
-            </div>
-            <div class="col-lg-2">
-                <div class="form-group">
-                    <input type="text" placeholder="Enter Birthday" name="bday" class="form-control" required>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-2">
-                <label><b>Gender</b></label>
-            </div>
-            <div class="col-lg-2">
-                <div class="form-group">
-                    <input type="text" placeholder="Enter gender" name="gender" class="form-control" required>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-2">
-                <label><b>Password</b></label>
-            </div>
-            <div class="col-lg-2">
-                <div class="form-group">
-                    <input type="password" placeholder="Enter password" name="password" id="password" class="form-control" required>
-                </div>
-            </div>
-            <div class="col-lg-2">
-                <span id="passStrong" class="glyphicon glyphicon-ok">Strong</span>
-                <span id="passWeak" class="glyphicon glyphicon-warning-sign">Weak</span>
-                <span id="passSmall" class="glyphicon glyphicon-remove">Not Enough</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-2">
-                <label><b>Reenter Password</b></label>
-            </div>
-            <div class="col-lg-2">
-                <div class="form-group">
-                    <input type="password" placeholder="Reenter password" name="password2" id="password2" class="form-control" required>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <span id="passMatched" class="glyphicon glyphicon-ok">Passwords match</span>
-                <span id="passNotMatched" class="glyphicon glyphicon-remove">Passwords do not match</span>
-            </div>
-        </div>
-
-        <div class="col-lg-2"><button class="btn btn-primary" type="submit" id="register" form="form1" value="save">Register</button><a href="index.php">Cancel</a></div>
     </div>
-
-
-
 
 </form>
 <script type="text/javascript" src="validations/jsvalidation.js">

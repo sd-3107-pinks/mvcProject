@@ -102,6 +102,7 @@ class accountsController extends http\controller
         $record = new account();
 
         $record = accounts::findUserbyUsername($_POST['uname']);
+        //print_r($record);
         if ($record == FALSE) {
             $errorMsg= 'user not found';
         } else {

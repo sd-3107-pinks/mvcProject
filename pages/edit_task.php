@@ -4,13 +4,13 @@
 <?php
 //this is how you print something  $data contains the record that was selected on the table.
 //print_r($data);
-session_start();
+//session_start();
 date_default_timezone_set('America/New_York');
 ?>
-
+<body background="https://thumbs.dreamstime.com/z/to-do-list-white-paper-pencils-background-template-56711188.jpg">
 <form action="index.php?page=tasks&action=update&id=<?php echo $data->id; ?> " method="post" name="editTaskForm">
 
-    <div class="container">
+    <div class="container"><br><br><br><br><br><br>
         <div class="row">
             <div class="col-lg-2">
                 <label><b>Owner Email</b></label>
@@ -55,7 +55,7 @@ date_default_timezone_set('America/New_York');
             <div class="col-lg-2">
                 <label><b>Message</b></label>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-4">
                 <div class="form-group">
                     <input type="text" name="message" id="message" class="form-control" value="<?php echo $data->message; ?>">
                 </div>
@@ -71,9 +71,19 @@ date_default_timezone_set('America/New_York');
                 </div>
             </div>
         </div>
-
+        <div class="row">
+            <div class="col-md-2">
+                <div class="form-group text-right">
+                    <button class="btn btn-primary" id="editTask" type="submit" form="form1" value="save">Save</button>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="form-group text-center">
+                    <a href="index.php?page=tasks&action=allOneUser&id=<?php echo $_SESSION["userID"] ?>">Cancel</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-lg-2"><button class="btn btn-primary" id="editTask" type="submit" form="form1" value="save">Save</button><a href="index.php?page=tasks&action=allOneUser&id=<?php echo $_SESSION["userID"] ?>">Cancel</a></div>
 </form>
 
 <script type="text/javascript" src="validations/todovalidation.js">

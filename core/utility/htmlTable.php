@@ -5,23 +5,23 @@ class htmlTable
     public static function genarateTableFromMultiArray($array)
     {
         if(!empty($array)) {
-            $tableGen = '<table class="table-hover table table-bordered table-striped">';
+            $tableGen = '<table class="table-hover table table-striped">';
             $tableGen .= '<tr>';
             $fieldHeadings = $array[0];
             $fieldHeadings = get_object_vars($fieldHeadings);
             $fieldHeadings = array_keys($fieldHeadings);
             $referingPage = $_REQUEST['page'];
             foreach ($fieldHeadings as $heading) {
-                $tableGen .= '<th>' . $heading . '</th>';
+                $tableGen .= '<th style="text-align:center;background-color:goldenrod">' . $heading . '</th>';
             }
             $tableGen .= '</tr>';
             foreach ($array as $record) {
                 $tableGen .= '<tr>';
                 foreach ($record as $key => $value) {
                     if ($key == 'id') {
-                        $tableGen .= '<td><a href="index.php?page=' . $referingPage . '&action=show&id=' . $value . '">View</a></td>';
+                        $tableGen .= '<td style="text-align:center"><b><a href="index.php?page=' . $referingPage . '&action=show&id=' . $value . '">View</a></b></td>';
                     } else {
-                        $tableGen .= '<td>' . $value . '</td>';
+                        $tableGen .= '<td style="text-align:center"><b>' . $value . '</b></td>';
                     }
                 }
                 $tableGen .= '</tr>';
@@ -32,7 +32,7 @@ class htmlTable
     }
     public static function generateTableFromOneRecord($innerArray)
     {
-        $tableGen = '<table class="table-hover table table-bordered table-striped"><tr>';
+        $tableGen = '<table class="table-hover table table-striped"><tr>';
         $tableGen .= '<tr>';
         foreach ($innerArray as $innerRow => $value) {
             $tableGen .= '<th>' . $innerRow . '</th>';
@@ -46,20 +46,20 @@ class htmlTable
     }
     public static function generateTableForOneTodo($tableData)
     {
-        $tableGen = '<table class="table-hover table table-bordered table-striped"><tr>';
-        $tableGen .= '<tr><td>Id</td><td>'.$tableData->id.'</td></tr>';
-        $tableGen .= '<tr><td>Owner Email</td><td>'.$tableData->owneremail.'</td></tr>';
-        $tableGen .= '<tr><td>Owner Id</td><td>'.$tableData->ownerid.'</td></tr>';
-        $tableGen .= '<tr><td>Created Date</td><td>'.$tableData->createddate.'</td></tr>';
-        $tableGen .= '<tr><td>Due Date</td><td>'.$tableData->duedate.'</td></tr>';
-        $tableGen .= '<tr><td>Message</td><td>'.$tableData->message.'</td></tr>';
-        $tableGen .= '<tr><td>Is Done</td><td>'.$tableData->isdone.'</td>';
+        $tableGen = '<table style="background-color:aquamarine" class="table-hover table table-bordered table-striped"><tr>';
+        $tableGen .= '<tr><td><h6><b>Id</b></h6></td><td><h6><b>'.$tableData->id.'</b></h6></td></tr>';
+        $tableGen .= '<tr><td><h6><b>Owner Email</b></h6></td><td><h6><b>'.$tableData->owneremail.'</b></h6></td></tr>';
+        $tableGen .= '<tr><td><h6><b>Owner Id</b></h6></td><td><h6><b>'.$tableData->ownerid.'</b></h6></td></tr>';
+        $tableGen .= '<tr><td><h6><b>Created Date</b></h6></td><td><h6><b>'.$tableData->createddate.'</b></h6></td></tr>';
+        $tableGen .= '<tr><td><h6><b>Due Date</b></h6></td><td><h6><b>'.$tableData->duedate.'</b></h6></td></tr>';
+        $tableGen .= '<tr><td><h6><b>Message</b></h6></td><td><h6><b>'.$tableData->message.'</b></h6></td></tr>';
+        $tableGen .= '<tr><td><h6><b>Is Done</b></h6></td><td><h6><b>'.$tableData->isdone.'</b></h6></td>';
         $tableGen .= '</tr></table><hr>';
         return $tableGen;
     }
     public static function generateTableForOneAccount($tableData)
     {
-        $tableGen = '<table class="table-hover table table-bordered table-striped"><tr>';
+        $tableGen = '<table class="table-hover table table-striped"><tr>';
         $tableGen .= '<tr><td>Id</td><td>'.$tableData->id.'</td></tr>';
         $tableGen .= '<tr><td>Email</td><td>'.$tableData->email.'</td></tr>';
         $tableGen .= '<tr><td>First Name</td><td>'.$tableData->fname.'</td></tr>';

@@ -11,6 +11,7 @@ abstract class model
             $sql = $this->insert();
             $INSERT = TRUE;
         }
+        echo $sql;
         $db = dbConn::getConnection();
         $statement = $db->prepare($sql);
         $array = get_object_vars($this);
@@ -48,7 +49,7 @@ abstract class model
         $comma = " ";
         $sql = 'UPDATE ' . $tableName . ' SET ';
         foreach ($array as $key => $value) {
-            if (!empty($value)) {
+            if ($value!= NULL || $value!="") {
                 $sql .= $comma . $key . ' = "' . $value . '"';
                 $comma = ", ";
             }
