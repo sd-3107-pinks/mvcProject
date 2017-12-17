@@ -4,6 +4,11 @@ abstract class model
 {
     public function save()
     {
+        if($this->validate() == FALSE) {
+            echo 'failed validation';
+            exit;
+        }
+
         if ($this->id != '') {
             $sql = $this->update();
             $INSERT = FALSE;
@@ -26,6 +31,11 @@ abstract class model
             $this->id = $db->lastInsertId();
         }
         return $this->id;
+    }
+    public function validate() {
+
+        $modelName = static::$modelName;
+        return $modelName::validate();
     }
     private function insert()
     {

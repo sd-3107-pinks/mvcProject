@@ -14,5 +14,14 @@ final class todo extends database\model
         $tableName = 'todos';
         return $tableName;
     }
+    public function validate() {
+        $valid = TRUE;
+        if($this->duedate == '') {
+            $valid = FALSE;
+        }else if($this->message == '') {
+            $valid = FALSE;
+        }
+        return $valid;
+    }
 }
 ?>

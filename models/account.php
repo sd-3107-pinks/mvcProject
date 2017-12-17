@@ -15,6 +15,19 @@ final class account extends \database\model
         $tableName = 'accounts';
         return $tableName;
     }
+    public function validate() {
+        $valid = TRUE;
+        if($this->email == '') {
+            $valid = FALSE;
+        }else if($this->fname == ''){
+            $valid = FALSE;
+        }else if($this->lname == ''){
+            $valid = FALSE;
+        }else if($this->password == ''){
+            $valid = FALSE;
+        }
+        return $valid;
+    }
 
 }
 ?>
