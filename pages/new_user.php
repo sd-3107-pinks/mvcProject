@@ -72,7 +72,7 @@
                             </div>
                             <div class="col-md-5">
                                 <div class="form-group">
-                                    <input value='' id="phone" name="phone" placeholder="Enter Phone Number" type="text" class="form-control" />
+                                    <input value='' id="phone" maxlength="10" name="phone" placeholder="Enter Phone Number" type="text" class="form-control" />
                                 </div>
                             </div>
                         </div>

@@ -47,7 +47,7 @@
             </div>
             <div class="col-lg-2">
                 <div class="form-group">
-                    <input type="text" name="phone" class="form-control" value="<?php echo $data->phone; ?>">
+                    <input type="text" name="phone" maxlength="10" class="form-control" value="<?php echo $data->phone; ?>">
                 </div>
             </div>
         </div>

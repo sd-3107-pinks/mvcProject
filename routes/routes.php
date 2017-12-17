@@ -2,12 +2,13 @@
 
 class routes
 {
+    static public function createRoutes()
+    {
+        return new route();
+    }
     public static function getRoutes()
     {
-        //You should improve this function by making functions to create routes in a factory. I will look for this when grading
-        //I also use object for the route because it has data and it's easier to access.
-        $route = new route();
-
+        $route = routes::createRoutes();
         $route->http_method = 'GET';
         $route->page = 'homepage';
         $route->action = 'show';
@@ -15,8 +16,7 @@ class routes
         $route->method = 'show';
         $routes[] = $route;
 
-
-        $route = new route();
+        $route = routes::createRoutes();
         $route->http_method = 'POST';
         $route->action = 'signup';
         $route->page = 'accounts';
@@ -24,7 +24,7 @@ class routes
         $route->method = 'signup';
         $routes[] = $route;
         //registering new user
-        $route = new route();
+        $route = routes::createRoutes();
         $route->http_method = 'POST';
         $route->action = 'register';
         $route->page = 'accounts';
@@ -32,7 +32,7 @@ class routes
         $route->method = 'register';
         $routes[] = $route;
         //GET METHOD index.php?page=accounts&action=all
-        $route = new route();
+        $route = routes::createRoutes();
         $route->http_method = 'GET';
         $route->action = 'all';
         $route->page = 'accounts';
@@ -40,7 +40,7 @@ class routes
         $route->method = 'all';
         $routes[] = $route;
         //GET METHOD index.php?page=accounts&action=show
-        $route = new route();
+        $route = routes::createRoutes();
         $route->http_method = 'GET';
         $route->action = 'show';
         $route->page = 'accounts';
@@ -49,7 +49,7 @@ class routes
         $routes[] = $route;
         //This goes in the login form action method
         //GET METHOD index.php?page=accounts&action=login
-        $route = new route();
+        $route = routes::createRoutes();
         $route->http_method = 'POST';
         $route->action = 'login';
         $route->page = 'accounts';
@@ -57,7 +57,7 @@ class routes
         $route->method = 'login';
         $routes[] = $route;
         //GET METHOD index.php?page=accounts&action=logout
-        $route = new route();
+        $route = routes::createRoutes();
         $route->http_method = 'POST';
         $route->action = 'logout';
         $route->page = 'accounts';
@@ -65,7 +65,7 @@ class routes
         $route->method = 'logout';
         $routes[] = $route;
         //GET METHOD index.php?page=accounts&action=myProf
-        $route = new route();
+        $route = routes::createRoutes();
         $route->http_method = 'POST';
         $route->action = 'myProf';
         $route->page = 'accounts';
@@ -73,7 +73,7 @@ class routes
         $route->method = 'show_profile';
         $routes[] = $route;
         //GET METHOD index.php?page=accounts&action=edit
-        $route = new route();
+        $route = routes::createRoutes();
         $route->http_method = 'POST';
         $route->action = 'edit';
         $route->page = 'accounts';
@@ -81,7 +81,7 @@ class routes
         $route->method = 'edit_profile';
         $routes[] = $route;
         //GET METHOD index.php?page=accounts&action=update
-        $route = new route();
+        $route = routes::createRoutes();
         $route->http_method = 'POST';
         $route->action = 'update';
         $route->page = 'accounts';
@@ -89,7 +89,7 @@ class routes
         $route->method = 'update_profile';
         $routes[] = $route;
         //GET METHOD index.php?page=accounts&action=showProf
-        $route = new route();
+        $route = routes::createRoutes();
         $route->http_method = 'GET';
         $route->action = 'showProf';
         $route->page = 'accounts';
@@ -97,7 +97,7 @@ class routes
         $route->method = 'show_profile';
         $routes[] = $route;
         //GET METHOD index.php?page=accounts&action=showProf
-        $route = new route();
+        $route = routes::createRoutes();
         $route->http_method = 'POST';
         $route->action = 'editPass';
         $route->page = 'accounts';
@@ -105,7 +105,7 @@ class routes
         $route->method = 'editPass';
         $routes[] = $route;
         //GET METHOD index.php?page=accounts&action=showProf
-        $route = new route();
+        $route = routes::createRoutes();
         $route->http_method = 'POST';
         $route->action = 'updatePass';
         $route->page = 'accounts';
@@ -114,7 +114,7 @@ class routes
         $routes[] = $route;
 
         //GET METHOD index.php?page=tasks&action=show
-        $route = new route();
+        $route = routes::createRoutes();
         $route->http_method = 'GET';
         $route->action = 'show';
         $route->page = 'tasks';
@@ -122,7 +122,7 @@ class routes
         $route->method = 'show';
         $routes[] = $route;
         //GET METHOD index.php?page=tasks&action=all
-        $route = new route();
+        $route = routes::createRoutes();
         $route->http_method = 'GET';
         $route->action = 'all';
         $route->page = 'tasks';
@@ -130,7 +130,7 @@ class routes
         $route->method = 'all';
         $routes[] = $route;
         //GET METHOD index.php?page=tasks&action=allOneUser
-        $route = new route();
+        $route = routes::createRoutes();
         $route->http_method = 'GET';
         $route->action = 'allOneUser';
         $route->page = 'tasks';
@@ -139,7 +139,7 @@ class routes
         $routes[] = $route;
 
         //YOU WILL NEED TO ADD MORE ROUTES
-        $route = new route();
+        $route = routes::createRoutes();
         $route->http_method = 'POST';
         $route->action = 'delete';
         $route->page = 'tasks';
@@ -147,7 +147,7 @@ class routes
         $route->method = 'delete';
         $routes[] = $route;
         //edit a task function
-        $route = new route();
+        $route = routes::createRoutes();
         $route->http_method = 'POST';
         $route->action = 'edit';
         $route->page = 'tasks';
@@ -155,7 +155,7 @@ class routes
         $route->method = 'editTask';
         $routes[] = $route;
         //update tasks
-        $route = new route();
+        $route = routes::createRoutes();
         $route->http_method = 'POST';
         $route->action = 'update';
         $route->page = 'tasks';
@@ -163,7 +163,7 @@ class routes
         $route->method = 'update';
         $routes[] = $route;
         //add tasks page
-        $route = new route();
+        $route = routes::createRoutes();
         $route->http_method = 'POST';
         $route->action = 'create';
         $route->page = 'tasks';
@@ -171,7 +171,7 @@ class routes
         $route->method = 'create';
         $routes[] = $route;
         //add tasks function
-        $route = new route();
+        $route = routes::createRoutes();
         $route->http_method = 'POST';
         $route->action = 'addTask';
         $route->page = 'tasks';
