@@ -23,8 +23,6 @@ final class account extends \database\model
             $valid = FALSE;
         }else if($this->lname == ''){
             $valid = FALSE;
-        }else if($this->password == ''){
-            $valid = FALSE;
         }
         return $valid;
     }
