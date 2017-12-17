@@ -5,6 +5,9 @@ $(document).ready(function(e) {
         if (duedate.length<1) {
             errorMsgs=errorMsgs.concat('Please enter due date');
         }
+        if (!validateDate(duedate)) {
+            errorMsgs=errorMsgs.concat('Please enter valid duedate');
+        }
         var message = $('#message').val();
         if (message.length<1) {
             errorMsgs=errorMsgs.concat('Please enter message');
@@ -20,6 +23,9 @@ $(document).ready(function(e) {
         var duedate = $('#duedate').val();
         if (duedate.length<1) {
             errorMsgs=errorMsgs.concat('Please enter due date');
+        }
+        if (!validateDate(duedate)) {
+            errorMsgs=errorMsgs.concat('Please enter valid duedate');
         }
         var message = $('#message').val();
         if (message.length<1) {
@@ -39,3 +45,11 @@ $(document).ready(function(e) {
         }
     });
 });
+function validateDate(sdate){
+    var filter = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
+    if(filter.test(sdate)){
+        return true;
+    } else {
+        return false;
+    }
+}
