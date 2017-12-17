@@ -46,7 +46,7 @@ class htmlTable
     }
     public static function generateTableForOneTodo($tableData)
     {
-        $tableGen = '<table style="background-color:aquamarine" class="table-hover table table-bordered table-striped"><tr>';
+        $tableGen = '<table style="background-color:lightcyan" class="table-hover table table-bordered table-striped"><tr>';
         $tableGen .= '<tr><td><h6><b>Id</b></h6></td><td><h6><b>'.$tableData->id.'</b></h6></td></tr>';
         $tableGen .= '<tr><td><h6><b>Owner Email</b></h6></td><td><h6><b>'.$tableData->owneremail.'</b></h6></td></tr>';
         $tableGen .= '<tr><td><h6><b>Owner Id</b></h6></td><td><h6><b>'.$tableData->ownerid.'</b></h6></td></tr>';

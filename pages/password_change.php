@@ -1,11 +1,6 @@
 
 <?php include 'headerPage.php' ?>
 
-<?php
-//this is how you print something  $data contains the record that was selected on the table.
-//print_r($data);
-?>
-
 <body background="https://marketinginsidergroup.com/wp-content/uploads/2016/12/pexels-photo-70232.jpeg">
 
 <form action="index.php?page=accounts&action=updatePass&id=<?php echo $data->id; ?> " method="POST" name="changePass">

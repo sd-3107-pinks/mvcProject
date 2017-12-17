@@ -54,7 +54,6 @@ class tasksController extends http\controller
     {
         $record = todos::findOne($_REQUEST['id']);
         $record->delete();
-        session_start();
         header('Location: index.php?page=tasks&action=allOneUser&id='.$_SESSION["userID"]);
     }
     public static function update()
@@ -69,7 +68,6 @@ class tasksController extends http\controller
         $record->message=$_POST['message'];
         $record->isdone=$_POST['isdone'];
         $record->save();
-        session_start();
         header('Location: index.php?page=tasks&action=allOneUser&id='.$_SESSION["userID"]);
     }
 }

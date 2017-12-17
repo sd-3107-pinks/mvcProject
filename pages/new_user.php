@@ -18,15 +18,10 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#"><b>Tasks.com</b></a>
+            <a class="navbar-brand" href="index.php"><b>Tasks.com</b></a>
         </div>
     </div>
 </nav>
-
-<?php
-//this is how you print something
-//print utility\htmlTable::genarateTableFromMultiArray($data);
-?>
 
 <form action="index.php?page=accounts&action=register" method="POST" name="userform">
 

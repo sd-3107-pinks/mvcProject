@@ -7,7 +7,6 @@ class todos extends database\collection
 
         $tableName = get_called_class();
         $sql = 'SELECT * FROM ' . $tableName . ' WHERE ownerid ="' . $userid.'"';
-
         $recordsSet = self::getResults($sql);
         return $recordsSet;
     }

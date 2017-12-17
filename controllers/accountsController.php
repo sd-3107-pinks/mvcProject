@@ -30,9 +30,7 @@ class accountsController extends http\controller
             $record->phone = $_POST['phone'];
             $record->birthday = $_POST['bday'];
             $record->gender = $_POST['gender'];
-            //$record->password = $_POST['password'];
-            $record->password = $record->setPassword($_POST['password']);
-            //print_r($record);
+            $record->password = \utility\passwordHash::setPassword($_POST['password']);
             $record->save();
             header('Location: index.php');
         }
@@ -62,30 +60,27 @@ class accountsController extends http\controller
     }
     public static function edit_profile()
     {
-        session_start();
         $record = accounts::findOne($_SESSION['userID']);
         self::getTemplate('edit_account', $record);
     }
     public static function show_profile()
     {
-        session_start();
         $record = accounts::findOne($_SESSION['userID']);
         self::getTemplate('show_account', $record);
     }
     public static function editPass()
     {
-        session_start();
         $record = accounts::findOne($_SESSION['userID']);
         self::getTemplate('password_change', $record);
     }
     public static function updatePass()
     {
         $records = accounts::findOne($_REQUEST['id']);
-        if($records->checkPassword($_POST['currentPass']) == TRUE){
+        if(\utility\passwordHash::checkPassword($_POST['currentPass'],$records->password) == TRUE){
             if($_POST['newPass1']==$_POST['newPass2']){
                 $record = new account();
                 $record->id=$records->id;
-                $record->password = $record->setPassword($_POST['newPass1']);
+                $record->password = \utility\passwordHash::setPassword($_POST['newPass1']);
                 $record->save();
                 header('Location: index.php?page=accounts&action=showProf');
             }else{
@@ -102,11 +97,10 @@ class accountsController extends http\controller
         $record = new account();
 
         $record = accounts::findUserbyUsername($_POST['uname']);
-        //print_r($record);
         if ($record == FALSE) {
             $errorMsg= 'user not found';
         } else {
-            if($record->checkPassword($_POST['psw']) == TRUE) {
+            if(\utility\passwordHash::checkPassword($_POST['psw'],$record->password) == TRUE) {
                 session_start();
                 $_SESSION["userID"] = $record->id;
                 $_SESSION["userEmail"] = $record->email;

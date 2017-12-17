@@ -3,7 +3,6 @@
 
 <body background="https://thumbs.dreamstime.com/z/to-do-list-white-paper-pencils-background-template-56711188.jpg">
 <?php
-//session_start();
 date_default_timezone_set('America/New_York');
 ?>
 

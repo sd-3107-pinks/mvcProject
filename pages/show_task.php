@@ -1,11 +1,5 @@
 <?php include 'headerPage.php' ?>
 
-<?php
-//this is how you print something  $data contains the record that was selected on the table.
-//print_r($data);
-//session_start();
-?>
-
 <body background="https://thumbs.dreamstime.com/z/to-do-list-white-paper-pencils-background-template-56711188.jpg">
 <div class="container"><br><br><br><br><br>
     <div class="row">
@@ -14,8 +8,6 @@
             <?php print utility\htmlTable::generateTableForOneTodo($data); ?>
         </div>
     </div>
-
-
     <div class="row">
         <div class="col-md-1">
             <div class="form-group text-right">
@@ -38,8 +30,6 @@
         </div>
     </div>
 </div>
-
-
 
 <script src="js/scripts.js"></script>
 </body>

@@ -2,9 +2,6 @@
 <?php include 'headerPage.php' ?>
 
 <?php
-//this is how you print something  $data contains the record that was selected on the table.
-//print_r($data);
-//session_start();
 date_default_timezone_set('America/New_York');
 ?>
 <body background="https://thumbs.dreamstime.com/z/to-do-list-white-paper-pencils-background-template-56711188.jpg">

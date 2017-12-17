@@ -14,5 +14,6 @@ class accounts extends \database\collection
             return $recordsSet[0];
         }
     }
+
 }
 ?>
