@@ -80,6 +80,9 @@ class accountsController extends http\controller
             if($_POST['newPass1']==$_POST['newPass2']){
                 $record = new account();
                 $record->id=$records->id;
+                $record->email=$records->email;
+                $record->fname=$records->fname;
+                $record->lname=$records->lname;
                 $record->password = \utility\passwordHash::setPassword($_POST['newPass1']);
                 $record->save();
                 header('Location: index.php?page=accounts&action=showProf');

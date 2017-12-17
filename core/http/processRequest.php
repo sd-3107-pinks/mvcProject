@@ -13,10 +13,20 @@ class processRequest
     }
     public static function getRequestedRoute()
     {
-        //this is a helper function that needs to be improved because it does too much.  I will look for this in grading
         $request_method = request::getRequestMethod();
         $page = request::getPage();
         $action = request::getAction();
+
+        $foundRoute = processRequest::getRoutesOnRequestParam($request_method,$page,$action);
+
+        if (is_null($foundRoute)) {
+            controller::getTemplate('notfound');
+            exit;
+        } else {
+            return $foundRoute;
+        }
+    }
+    public static function getRoutesOnRequestParam($request_method,$page,$action){
         //this gets the routes objects, you need to add routes to add pages and follow the template of the route specified
         $routes = \routes::getRoutes();
         $foundRoute = NULL;
@@ -27,12 +37,8 @@ class processRequest
                 break;
             }
         }
-        if (is_null($foundRoute)) {
-            controller::getTemplate('notfound');
-            exit;
-        } else {
-            return $foundRoute;
-        }
+
+        return $foundRoute;
     }
 }
 ?>
