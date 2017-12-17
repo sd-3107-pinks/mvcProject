@@ -6,12 +6,15 @@
 //print_r($data);
 ?>
 
+<body background="https://marketinginsidergroup.com/wp-content/uploads/2016/12/pexels-photo-70232.jpeg">
+
 <form action="index.php?page=accounts&action=update&id=<?php echo $data->id; ?> " method="POST" name="userformedit">
 
     <div class="container">
+        <label style="color:white"><h1><b>Hi <?php echo $data->fname; ?>! You can change your details here..!! </b></h1></label>
         <div class="row">
             <div class="col-lg-2">
-                <label><b>Email</b></label>
+                <label style="color:white"><b>Email</b></label>
             </div>
             <div class="col-lg-2">
                 <div class="form-group">
@@ -19,13 +22,13 @@
                 </div>
             </div>
             <div class="col-lg-1">
-                <span id="emailok" class="glyphicon glyphicon-ok">Valid</span>
-                <span id="emailnotok" class="glyphicon glyphicon-remove">Invalid</span>
+                <span id="emailok" class="glyphicon glyphicon-ok" style="color:white">Valid</span>
+                <span id="emailnotok" class="glyphicon glyphicon-remove" style="color:white">Invalid</span>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-2">
-                <label><b>First Name</b></label>
+                <label style="color:white"><b>First Name</b></label>
             </div>
             <div class="col-lg-2">
                 <div class="form-group">
@@ -35,7 +38,7 @@
         </div>
         <div class="row">
             <div class="col-lg-2">
-                <label><b>Last Name</b></label>
+                <label style="color:white"><b>Last Name</b></label>
             </div>
             <div class="col-lg-2">
                 <div class="form-group">
@@ -45,7 +48,7 @@
         </div>
         <div class="row">
             <div class="col-lg-2">
-                <label><b>Phone</b></label>
+                <label style="color:white"><b>Phone</b></label>
             </div>
             <div class="col-lg-2">
                 <div class="form-group">
@@ -55,7 +58,7 @@
         </div>
         <div class="row">
             <div class="col-lg-2">
-                <label><b>Birthday</b></label>
+                <label style="color:white"><b>Birthday</b></label>
             </div>
             <div class="col-lg-2">
                 <div class="form-group">
@@ -65,7 +68,7 @@
         </div>
         <div class="row">
             <div class="col-lg-2">
-                <label><b>Gender</b></label>
+                <label style="color:white"><b>Gender</b></label>
             </div>
             <div class="col-lg-2">
                 <div class="form-group">
@@ -73,8 +76,19 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="form-group text-right">
+                    <button class="btn btn-default" type="submit" form="form1" id="editAccount" value="save">Save</button>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="form-group text-center">
+                    <a style="color:white" href="index.php?page=accounts&action=showProf"><h4><b>Cancel</b></h4></a>
+                </div>
+            </div>
+        </div>
 
-        <div class="col-lg-2"><button class="btn btn-primary" type="submit" form="form1" id="editAccount" value="save">Save</button><a href="index.php?page=accounts&action=showProf">Cancel</a></div>
     </div>
 
 </form>

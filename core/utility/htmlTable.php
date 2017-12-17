@@ -59,14 +59,14 @@ class htmlTable
     }
     public static function generateTableForOneAccount($tableData)
     {
-        $tableGen = '<table class="table-hover table table-striped"><tr>';
-        $tableGen .= '<tr><td>Id</td><td>'.$tableData->id.'</td></tr>';
-        $tableGen .= '<tr><td>Email</td><td>'.$tableData->email.'</td></tr>';
-        $tableGen .= '<tr><td>First Name</td><td>'.$tableData->fname.'</td></tr>';
-        $tableGen .= '<tr><td>Last Name</td><td>'.$tableData->lname.'</td></tr>';
-        $tableGen .= '<tr><td>Phone</td><td>'.$tableData->phone.'</td></tr>';
-        $tableGen .= '<tr><td>Birthday</td><td>'.$tableData->birthday.'</td></tr>';
-        $tableGen .= '<tr><td>Gender</td><td>'.$tableData->gender.'</td>';
+        $tableGen = '<table style="background-color:beige" class="table-hover table table-striped table-striped"><tr>';
+        $tableGen .= '<tr><td><h6><b>Id</b></h6></td><td><h6><b>'.$tableData->id.'</b></h6></td></tr>';
+        $tableGen .= '<tr><td><h6><b>Email</b></h6></td><td><h6><b>'.$tableData->email.'</b></h6></td></tr>';
+        $tableGen .= '<tr><td><h6><b>First Name</b></h6></td><td><h6><b>'.$tableData->fname.'</b></h6></td></tr>';
+        $tableGen .= '<tr><td><h6><b>Last Name</b></h6></td><td><h6><b>'.$tableData->lname.'</b></h6></td></tr>';
+        $tableGen .= '<tr><td><h6><b>Phone</b></h6></td><td><h6><b>'.$tableData->phone.'</b></h6></td></tr>';
+        $tableGen .= '<tr><td><h6><b>Birthday</b></h6></td><td><h6><b>'.$tableData->birthday.'</b></h6></td></tr>';
+        $tableGen .= '<tr><td><h6><b>Gender</b></h6></td><td><h6><b>'.$tableData->gender.'</b></h6></td>';
         $tableGen .= '</tr></table><hr>';
         return $tableGen;
     }
