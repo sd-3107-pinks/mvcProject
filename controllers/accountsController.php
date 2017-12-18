@@ -32,7 +32,7 @@ class accountsController extends http\controller
             $record->gender = $_POST['gender'];
             $record->password = \utility\passwordHash::setPassword($_POST['password']);
             $record->save();
-            print_r($record);
+            //print_r($record);
             header('Location: index.php');
         }
         else{
@@ -113,11 +113,12 @@ class accountsController extends http\controller
                 $errorMsg= 'password does not match';
             }
         }
+        echo $errorMsg;
 
         if ($errorMsg) {
             $_SESSION['validation_message'] = $errorMsg; //session variable to save the error message to show as an alert.
         }
-        print "<html></html><script type='text/javascript'>alert(\"$errorMsg\");</script></html>";
+        //print "<html></html><script type='text/javascript'>alert(\"$errorMsg\");</script></html>";
        //header('Location: index.php');
 
     }
