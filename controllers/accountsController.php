@@ -32,6 +32,7 @@ class accountsController extends http\controller
             $record->gender = $_POST['gender'];
             $record->password = \utility\passwordHash::setPassword($_POST['password']);
             $record->save();
+            print_r($record);
             header('Location: index.php');
         }
         else{

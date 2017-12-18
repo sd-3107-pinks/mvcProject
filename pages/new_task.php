@@ -13,7 +13,7 @@ date_default_timezone_set('America/New_York');
             <div class="col-lg-2">
                 <label><h4><b>Created Date</b></h4></label>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-4">
                 <div class="form-group">
                      <input type="text" name="createddate" class="form-control" value="<?php echo date("j/n/Y"); ?>" readonly required>
                 </div>
@@ -23,9 +23,9 @@ date_default_timezone_set('America/New_York');
             <div class="col-lg-2">
                 <label><h4><b>Due Date</b></h4></label>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-4">
                 <div class="form-group">
-                    <input type="text" name="duedate" class="form-control" id="duedate"/>
+                    <input type="date" name="duedate" class="form-control" id="duedate"/>
                 </div>
             </div>
         </div>

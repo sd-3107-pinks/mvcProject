@@ -9,9 +9,9 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-1">
+        <div class="col-md-3">
             <div class="form-group text-right">
-                <form action="index.php?page=tasks&action=edit&id=<?php echo $data->id; ?> " method="post" id="form1" style="float:left;">
+                <form action="index.php?page=tasks&action=edit&id=<?php echo $data->id; ?> " method="post" id="form1">
                     <button class="btn btn-primary text-center" type="submit" form="form1" value="edit">Edit</button>
                 </form>
             </div>

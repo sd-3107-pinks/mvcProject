@@ -47,10 +47,7 @@ class tasksController extends http\controller
             $dateobj = DateTime::createFromFormat($format, $createddate);
             $iso_datetime_created = $dateobj->format(Datetime::ATOM);
             $record->createddate = $iso_datetime_created;
-            $duedate=$_POST['duedate'];
-            $dateobj = DateTime::createFromFormat($format, $duedate);
-            $iso_datetime_due = $dateobj->format(Datetime::ATOM);
-            $record->duedate = $iso_datetime_due;
+            $record->duedate = $_POST['duedate'];
             $record->message = $_POST['message'];
             $record->save();
             header('Location: index.php?page=tasks&action=allOneUser&id='.$_SESSION["userID"]);

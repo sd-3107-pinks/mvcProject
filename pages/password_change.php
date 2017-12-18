@@ -47,7 +47,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <div class="form-group text-right">
                     <button class="btn btn-default" type="submit" id="updatePass" value="save">Update Password</button>
                 </div>

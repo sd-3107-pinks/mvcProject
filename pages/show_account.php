@@ -14,7 +14,7 @@
                 ?>
             </div>
         </div>
-    <div class="col-lg-1"><button class="btn btn-default" type="submit" form="form1" value="edit">Edit</button></div>
+    <div class="col-lg-2"><button class="btn btn-default  pull-right" type="submit" form="form1" value="edit">Edit</button></div>
 </form>
 
 <form action="index.php?page=accounts&action=editPass&id=<?php echo $_SESSION['userID']; ?> " method="post" id="form2" style="float:left;">

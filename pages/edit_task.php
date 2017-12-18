@@ -32,7 +32,7 @@ date_default_timezone_set('America/New_York');
             <div class="col-lg-2">
                 <label><b>Created Date</b></label>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-4">
                 <div class="form-group">
                     <input type="text" name="createddate" class="form-control" value="<?php echo $data->createddate; ?>" readonly disabled>
                 </div>
@@ -42,9 +42,9 @@ date_default_timezone_set('America/New_York');
             <div class="col-lg-2">
                 <label><b>Due Date</b></label>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-4">
                 <div class="form-group">
-                    <input type="text" name="duedate" id="duedate" class="form-control" value="<?php echo $data->duedate; ?>">
+                    <input type="date" name="duedate" id="duedate" class="form-control" value="<?php echo $data->duedate; ?>">
                 </div>
             </div>
         </div>

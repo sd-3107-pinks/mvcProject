@@ -82,7 +82,7 @@
                             </div>
                             <div class="col-md-5">
                                 <div class="form-group">
-                                    <input value='' id="bday" name="bday" placeholder="Enter Date of Birth" type="text" class="form-control" />
+                                    <input value='' id="bday" name="bday" placeholder="Enter Date of Birth" type="date" class="form-control" />
                                 </div>
                             </div>
                         </div>

@@ -11,7 +11,7 @@
             <div class="col-lg-2">
                 <label style="color:white"><b>Email</b></label>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-3">
                 <div class="form-group">
                     <input type="text" name="email" id="email" class="form-control" value="<?php echo $data->email; ?>" required>
                 </div>
@@ -57,7 +57,7 @@
             </div>
             <div class="col-lg-2">
                 <div class="form-group">
-                    <input type="text" name="birthday" class="form-control" value="<?php echo $data->birthday; ?>">
+                    <input type="date" name="birthday" class="form-control" value="<?php echo $data->birthday; ?>">
                 </div>
             </div>
         </div>
