@@ -29,7 +29,7 @@
             <form action="index.php?page=tasks&action=create" method="POST" style="float:left;">
                 <li><button class="btn btn-link navbar-btn" type="submit"><b>Create Task</b></button></li>
             </form>
-
+            <label class="navbar-btn" style="color:white"><h4><b>Welcome <?php echo $_SESSION["userName"] ?>..!!<b></h4></label>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <form action="index.php?page=accounts&action=logout" method="post" id="form3" style="float:right;">

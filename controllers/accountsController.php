@@ -107,6 +107,7 @@ class accountsController extends http\controller
                 session_start();
                 $_SESSION["userID"] = $record->id;
                 $_SESSION["userEmail"] = $record->email;
+                $_SESSION["userName"] = $record->fname;
                 header('Location: index.php?page=tasks&action=allOneUser&id='.$record->id);
             } else {
                 $errorMsg= 'password does not match';
