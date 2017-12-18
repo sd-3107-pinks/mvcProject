@@ -8,6 +8,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesCss.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -32,9 +33,19 @@
 <form action="index.php?page=accounts&action=login" method="POST">
 
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3"></div>
+        <div class="container"><br><br>
+            <div class="row vdivide">
+                <div class="col-md-6">
+                    <label style="color:white"><h1><b> Welcome to Tasks.com</b></h1></label>
+                    <label style="color:white"><h2>
+                            We help you create and manage your tasks
+                            inspite of your everyday busy schedule.<br>
+                            You just need to sign up and all for FREE..!!
+                            Enjoy..!!
+
+                        </h2></label>
+
+                </div>
                 <div class="col-md-6">
                     <div class="well login-box">
                         <form action="">
