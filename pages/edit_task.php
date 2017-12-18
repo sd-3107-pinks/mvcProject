@@ -2,7 +2,7 @@
 <?php include 'headerPage.php' ?>
 
 <?php
-date_default_timezone_set('America/New_York');
+\utility\dateMethod::setDateFormat('America/New_York');
 ?>
 <body background="https://thumbs.dreamstime.com/z/to-do-list-white-paper-pencils-background-template-56711188.jpg">
 <form action="index.php?page=tasks&action=update&id=<?php echo $data->id; ?> " method="post" name="editTaskForm">

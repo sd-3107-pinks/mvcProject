@@ -3,7 +3,7 @@
 
 <body background="https://thumbs.dreamstime.com/z/to-do-list-white-paper-pencils-background-template-56711188.jpg">
 <?php
-date_default_timezone_set('America/New_York');
+\utility\dateMethod::setDateFormat('America/New_York');
 ?>
 
 <form action="index.php?page=tasks&action=addTask" method="POST" name="addTaskForm">

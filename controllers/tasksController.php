@@ -38,15 +38,10 @@ class tasksController extends http\controller
     {
         if(key_exists('userID',$_SESSION)) {
             $userID = $_SESSION['userID'];
-            date_default_timezone_set('America/New_York');
-            $format = "d/m/Y";
             $record = new todo();
             $record->owneremail = $_SESSION["userEmail"];
             $record->ownerid = $userID;
-            $createddate=$_POST['createddate'];
-            $dateobj = DateTime::createFromFormat($format, $createddate);
-            $iso_datetime_created = $dateobj->format(Datetime::ATOM);
-            $record->createddate = $iso_datetime_created;
+            $record->createddate = \utility\dateMethod::changeDateFormat($_POST['createddate']);
             $record->duedate = $_POST['duedate'];
             $record->message = $_POST['message'];
             $record->save();

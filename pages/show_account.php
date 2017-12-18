@@ -9,7 +9,6 @@
 
             <div class="col-md-6 text-center">
                 <?php
-                //this is how you print something  $data contains the record that was selected on the table.
                 print utility\htmlTable::generateTableForOneAccount($data);
                 ?>
             </div>
