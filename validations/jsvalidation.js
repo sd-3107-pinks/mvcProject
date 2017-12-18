@@ -54,29 +54,33 @@ $(document).ready(function(e) {
         var errorMsgs="";
         var sEmail = $('#email').val();
         if (sEmail.length==0) {
-            errorMsgs=errorMsgs.concat('Please enter your email address');
+            errorMsgs=errorMsgs.concat('\t •Please enter your email address \n');
         }
         if (!validateEmail(sEmail)) {
-            errorMsgs=errorMsgs.concat('Please enter valid email address');
+            errorMsgs=errorMsgs.concat('\t •Please enter valid email address \n');
         }
         var fname = $('#fname').val();
         if (fname.length==0) {
-            errorMsgs=errorMsgs.concat('Please enter First Name');
+            errorMsgs=errorMsgs.concat('\t •Please enter First Name \n');
         }
         var lname = $('#lname').val();
         if (lname.length==0) {
-            errorMsgs=errorMsgs.concat('Please enter Last Name');
+            errorMsgs=errorMsgs.concat('\t •Please enter Last Name \n');
+        }
+        var phone = $('#phone').val();
+        if (phone.length<10) {
+            errorMsgs=errorMsgs.concat('\t •Please enter 10 digit phone number \n');
         }
         var pass1 = $('#password').val();
         if (pass1.length<6) {
-            errorMsgs=errorMsgs.concat('Please enter Password');
+            errorMsgs=errorMsgs.concat('\t •Please enter Password \n');
         }
         var pass2 = $('#password2').val();
         if (pass2.length<6) {
-            errorMsgs=errorMsgs.concat('Please reenter Password');
+            errorMsgs=errorMsgs.concat('\t •Please reenter Password \n');
         }
         if(pass1!=pass2){
-            errorMsgs=errorMsgs.concat('Passwords do not match');
+            errorMsgs=errorMsgs.concat('\t •Passwords do not match \n');
         }
         if(errorMsgs.length>0) {
             alert(errorMsgs);
@@ -88,18 +92,18 @@ $(document).ready(function(e) {
         var errorMsgs="";
         var sEmail = $('#email').val();
         if (sEmail.length==0) {
-            errorMsgs=errorMsgs.concat('Please enter your email address');
+            errorMsgs=errorMsgs.concat('\t •Please enter your email address \n');
         }
         if (!validateEmail(sEmail)) {
-            errorMsgs=errorMsgs.concat('Please enter valid email address');
+            errorMsgs=errorMsgs.concat('\t •Please enter valid email address \n');
         }
         var fname = $('#fname').val();
         if (fname.length==0) {
-            errorMsgs=errorMsgs.concat('Please enter First Name');
+            errorMsgs=errorMsgs.concat('\t •Please enter First Name \n');
         }
         var lname = $('#lname').val();
         if (lname.length==0) {
-            errorMsgs=errorMsgs.concat('Please enter Last Name');
+            errorMsgs=errorMsgs.concat('\t •Please enter Last Name \n');
         }
         if(errorMsgs.length>0) {
             alert(errorMsgs);
@@ -112,14 +116,14 @@ $(document).ready(function(e) {
         var errorMsgs="";
         var pass1 = $('#password').val();
         if (pass1.length<6) {
-            errorMsgs=errorMsgs.concat('Please enter Password');
+            errorMsgs=errorMsgs.concat('\t •Please enter Password \n');
         }
         var pass2 = $('#password2').val();
         if (pass2.length<6) {
-            errorMsgs=errorMsgs.concat('Please reenter Password');
+            errorMsgs=errorMsgs.concat('\t •Please reenter Password \n');
         }
         if(pass1!=pass2){
-            errorMsgs=errorMsgs.concat('Passwords do not match');
+            errorMsgs=errorMsgs.concat('\t •Passwords do not match \n');
         }
         if(errorMsgs.length>0) {
             alert(errorMsgs);
